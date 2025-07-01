@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "test_AXI_matrix_mul_behav" "xil_defaultlib.test_AXI_matrix_mul" -log "elaborate.log" 

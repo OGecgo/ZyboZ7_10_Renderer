@@ -1,0 +1,7 @@
+Running: xsim.dir/test_AXI_matrix_mul_behav/xsimk -simmode gui -wdb test_AXI_matrix_mul_behav.wdb -simrunnum 0 -socket 56335
+Design successfully loaded
+Design Loading Memory Usage: 177612 KB (Peak: 177732 KB)
+Design Loading CPU Usage: 1090 ms
+Simulation completed
+Simulation Memory Usage: 267548 KB (Peak: 316880 KB)
+Simulation CPU Usage: 1090 ms
