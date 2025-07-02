@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="main_axi_dynclk_0_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_axi_dynclk_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_axi_vdma_0_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_axi_vdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_rst_ps7_0_100M_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_rgb2dvi_0_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_rgb2dvi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_v_axi4s_vid_out_0_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_v_axi4s_vid_out_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_processing_system7_0_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_axi_mem_intercon_imp_auto_pc_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_axi_mem_intercon_imp_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_axi_smc_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_v_tc_0_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_v_tc_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_axis_subset_converter_0_0_synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/main_axis_subset_converter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="main_axi_dynclk_0_0_synth_1"/>
+		<Parent Id="main_axi_vdma_0_0_synth_1"/>
+		<Parent Id="main_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="main_rgb2dvi_0_0_synth_1"/>
+		<Parent Id="main_v_axi4s_vid_out_0_0_synth_1"/>
+		<Parent Id="main_processing_system7_0_0_synth_1"/>
+		<Parent Id="main_axi_mem_intercon_imp_auto_pc_0_synth_1"/>
+		<Parent Id="main_axi_smc_0_synth_1"/>
+		<Parent Id="main_v_tc_0_0_synth_1"/>
+		<Parent Id="main_axis_subset_converter_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+
