@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/ZyboZ7_10_renderer.srcs/sources_1/new/AXI_matrix_mul.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'AXI_matrix_mul'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/ZyboZ7_10_renderer.srcs/sim_1/new/test_AXI_matrix_mul.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'test_AXI_matrix_mul'
