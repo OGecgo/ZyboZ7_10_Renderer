@@ -1,0 +1,724 @@
+TRACE::2025-07-02.17:47:46::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:46::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:46::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:46::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:46::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:46::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:46::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-07-02.17:47:48::SCWPlatform::Opened new HwDB with name main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWWriter::formatted JSON is {
+	"platformName":	"main_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"main_wrapper",
+	"platHandOff":	"/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/main_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/main_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2025-07-02.17:47:48::SCWWriter::formatted JSON is {
+	"platformName":	"main_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"main_wrapper",
+	"platHandOff":	"/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/main_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/main_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"main_wrapper",
+	"systems":	[{
+			"systemName":	"main_wrapper",
+			"systemDesc":	"main_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"main_wrapper"
+		}]
+}
+TRACE::2025-07-02.17:47:48::SCWPlatform::Boot application domains not present, creating them
+TRACE::2025-07-02.17:47:48::SCWDomain::checking for install qemu data   : 
+TRACE::2025-07-02.17:47:48::SCWDomain:: Using the QEMU Data from install at  : /tools/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-07-02.17:47:48::SCWDomain:: Using the QEMU args  from install at  : /tools/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:48::SCWPlatform::Boot application domain added for zynq_fsbl
+TRACE::2025-07-02.17:47:48::SCWPlatform::Generating the sources  .
+TRACE::2025-07-02.17:47:48::SCWBDomain::Generating boot domain sources.
+TRACE::2025-07-02.17:47:48::SCWBDomain:: Generating the zynq_fsbl Application.
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:48::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:48::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:48::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-07-02.17:47:48::SCWMssOS::No sw design opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:48::SCWMssOS::mss does not exists at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:48::SCWMssOS::Creating sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:48::SCWMssOS::Adding the swdes entry, created swdb /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:48::SCWMssOS::updating the scw layer changes to swdes at   /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:48::SCWMssOS::Writing mss at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:48::SCWMssOS::Completed writing the mss file at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-07-02.17:47:48::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2025-07-02.17:47:48::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2025-07-02.17:47:48::SCWBDomain::Completed writing the mss file at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-07-02.17:47:52::SCWPlatform::Generating sources Done.
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-07-02.17:47:52::SCWMssOS::No sw design opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::mss exists loading the mss file  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Opened the sw design from mss  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Adding the swdes entry /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-07-02.17:47:52::SCWMssOS::updating the scw layer about changes
+TRACE::2025-07-02.17:47:52::SCWMssOS::Opened the sw design.  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Saving the mss changes /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Commit changes completed.
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWWriter::formatted JSON is {
+	"platformName":	"main_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"main_wrapper",
+	"platHandOff":	"/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/main_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/main_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"main_wrapper",
+	"systems":	[{
+			"systemName":	"main_wrapper",
+			"systemDesc":	"main_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"main_wrapper",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"2988308b429dbe9317bec98bedfe5a01",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-07-02.17:47:52::SCWMssOS::Saving the mss changes /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Commit changes completed.
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWWriter::formatted JSON is {
+	"platformName":	"main_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"main_wrapper",
+	"platHandOff":	"/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/main_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/main_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"main_wrapper",
+	"systems":	[{
+			"systemName":	"main_wrapper",
+			"systemDesc":	"main_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"main_wrapper",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"2988308b429dbe9317bec98bedfe5a01",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWDomain::checking for install qemu data   : 
+TRACE::2025-07-02.17:47:52::SCWDomain:: Using the QEMU Data from install at  : /tools/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_linux/qemu/
+TRACE::2025-07-02.17:47:52::SCWDomain:: Using the QEMU args  from install at  : /tools/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_linux/qemu/qemu_args.txt
+TRACE::2025-07-02.17:47:52::SCWDomain::Qemu Directory name is changed from "" to "qemu"
+TRACE::2025-07-02.17:47:52::SCWMssOS::Saving the mss changes /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Commit changes completed.
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWWriter::formatted JSON is {
+	"platformName":	"main_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"main_wrapper",
+	"platHandOff":	"/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/main_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/main_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"main_wrapper",
+	"systems":	[{
+			"systemName":	"main_wrapper",
+			"systemDesc":	"main_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"main_wrapper",
+			"sysActiveDom":	"linux_ps7_cortexa9",
+			"sysDefaultDom":	"linux_ps7_cortexa9",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"2988308b429dbe9317bec98bedfe5a01",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"linux_ps7_cortexa9",
+					"domainDispName":	"linux_ps7_cortexa9",
+					"domainDesc":	"linux_ps7_cortexa9",
+					"processors":	"ps7_cortexa9",
+					"os":	"linux",
+					"sdxOs":	"linux",
+					"qemuArgs":	"<platformDir>/resources/main_wrapper/linux_ps7_cortexa9/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/main_wrapper/linux_ps7_cortexa9/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"isLinuxConfigured":	"true",
+					"isBuildFlow":	"false",
+					"arch":	"32-bit",
+					"sysBootDir":	"",
+					"isMicroBlaze":	"false",
+					"bootmode":	"sd",
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-07-02.17:47:52::SCWMssOS::Saving the mss changes /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Commit changes completed.
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWWriter::formatted JSON is {
+	"platformName":	"main_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"main_wrapper",
+	"platHandOff":	"/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/main_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/main_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"main_wrapper",
+	"systems":	[{
+			"systemName":	"main_wrapper",
+			"systemDesc":	"main_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"main_wrapper",
+			"sysActiveDom":	"linux_ps7_cortexa9",
+			"sysDefaultDom":	"linux_ps7_cortexa9",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"2988308b429dbe9317bec98bedfe5a01",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"linux_ps7_cortexa9",
+					"domainDispName":	"linux_ps7_cortexa9",
+					"domainDesc":	"linux_ps7_cortexa9",
+					"processors":	"ps7_cortexa9",
+					"os":	"linux",
+					"sdxOs":	"linux",
+					"qemuArgs":	"<platformDir>/resources/main_wrapper/linux_ps7_cortexa9/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/main_wrapper/linux_ps7_cortexa9/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"isLinuxConfigured":	"true",
+					"isBuildFlow":	"false",
+					"arch":	"32-bit",
+					"sysBootDir":	"",
+					"isMicroBlaze":	"false",
+					"bootmode":	"sd",
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-07-02.17:47:52::SCWPlatform::Started generating the artifacts platform main_wrapper
+TRACE::2025-07-02.17:47:52::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-07-02.17:47:52::SCWPlatform::Started generating the artifacts for system configuration main_wrapper
+LOG::2025-07-02.17:47:52::SCWSystem::Started Processing the domain linux_ps7_cortexa9
+TRACE::2025-07-02.17:47:52::SCWDomain::Generating domain artifcats
+LOG::2025-07-02.17:47:52::SCWSystem::Completed Processing the domain linux_ps7_cortexa9
+LOG::2025-07-02.17:47:52::SCWSystem::Completed Processing the sysconfig main_wrapper
+LOG::2025-07-02.17:47:52::SCWPlatform::Completed generating the artifacts for system configuration main_wrapper
+TRACE::2025-07-02.17:47:52::SCWPlatform::Started preparing the platform 
+TRACE::2025-07-02.17:47:52::SCWSystem::Writing the bif file for system config main_wrapper
+TRACE::2025-07-02.17:47:52::SCWSystem::dir created 
+TRACE::2025-07-02.17:47:52::SCWSystem::Writing the bif 
+TRACE::2025-07-02.17:47:52::SCWPlatform::Started writing the spfm file 
+TRACE::2025-07-02.17:47:52::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-07-02.17:47:52::SCWPlatform::Completed generating the platform
+TRACE::2025-07-02.17:47:52::SCWMssOS::Saving the mss changes /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-02.17:47:52::SCWMssOS::Commit changes completed.
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to open the hw design at /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA given /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA absoulate path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform::DSA directory /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Platform Path /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/hw/main_wrapper.xsa
+TRACE::2025-07-02.17:47:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Trying to set the existing hwdb with name main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Opened existing hwdb main_wrapper_0
+TRACE::2025-07-02.17:47:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-02.17:47:52::SCWMssOS::Checking the sw design at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWMssOS::DEBUG:  swdes dump  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-02.17:47:52::SCWMssOS::Sw design exists and opened at  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-02.17:47:52::SCWWriter::formatted JSON is {
+	"platformName":	"main_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"main_wrapper",
+	"platHandOff":	"/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/main_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/main_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"main_wrapper",
+	"systems":	[{
+			"systemName":	"main_wrapper",
+			"systemDesc":	"main_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"main_wrapper",
+			"sysActiveDom":	"linux_ps7_cortexa9",
+			"sysDefaultDom":	"linux_ps7_cortexa9",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"2988308b429dbe9317bec98bedfe5a01",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"linux_ps7_cortexa9",
+					"domainDispName":	"linux_ps7_cortexa9",
+					"domainDesc":	"linux_ps7_cortexa9",
+					"processors":	"ps7_cortexa9",
+					"os":	"linux",
+					"sdxOs":	"linux",
+					"qemuArgs":	"<platformDir>/resources/main_wrapper/linux_ps7_cortexa9/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/main_wrapper/linux_ps7_cortexa9/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"isLinuxConfigured":	"true",
+					"isBuildFlow":	"false",
+					"arch":	"32-bit",
+					"sysBootDir":	"",
+					"isMicroBlaze":	"false",
+					"bootmode":	"sd",
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-07-02.17:47:52::SCWPlatform::updated the xpfm file.

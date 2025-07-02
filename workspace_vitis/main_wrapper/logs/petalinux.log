@@ -1,0 +1,4 @@
+TRACE::2025-07-02.17:47:52::SCWLinux::Copying the qemu file from  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/resources/main_wrapper/linux_ps7_cortexa9/qemu_args.txt To /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/qemu/
+TRACE::2025-07-02.17:47:52::SCWLinux::Copying the qemu file from  /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/resources/main_wrapper/linux_ps7_cortexa9/qemu_args.txt To /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/linux_ps7_cortexa9/qemu/
+TRACE::2025-07-02.17:47:52::SCWLinux:: Copying the user libraries. 
+TRACE::2025-07-02.17:47:52::SCWLinux::Skipping the Petalinux build as image is already given.

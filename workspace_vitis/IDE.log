@@ -7,3 +7,9 @@
 17:45:34 INFO  : plnx-install-location is set to ''
 17:45:34 INFO  : Successfully done query RDI_DATADIR 
 17:45:34 INFO  : Successfully done setting workspace for the tool. 
+17:47:52 WARN  : An unexpected exception occurred in the module 'platform project logging'
+17:47:52 WARN  : An unexpected exception occurred in the module 'platform project logging'
+17:47:52 WARN  : An unexpected exception occurred in the module 'platform project logging'
+17:47:52 WARN  : An unexpected exception occurred in the module 'platform project logging'
+17:47:52 INFO  : Platform 'main_wrapper' is added to custom repositories.
+17:47:54 INFO  : Platform 'main_wrapper' is added to custom repositories.

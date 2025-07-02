@@ -1,3 +1,4 @@
 timestamp=[2025-07-02 17:45:32], mode=WORKBENCH_START, duration=0:00:06.188, duration_ms=6188, data={}
 timestamp=[2025-07-02 17:45:32], mode=WORKBENCH_UI_INIT, duration=0:00:00.012, duration_ms=12, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
 timestamp=[2025-07-02 17:45:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.451, duration_ms=451, data={}
+timestamp=[2025-07-02 17:47:54], mode=APP_CREATION, duration=0:00:07.881, duration_ms=7881, data={name=renderer_with_fpga, project_type=sdk, os=linux, processor=, runtime=cpp, platform=main_wrapper, application_type=application}
