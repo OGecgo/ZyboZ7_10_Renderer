@@ -1,0 +1,41 @@
+04:31:49 **** Incremental Build of configuration Debug for project renderer ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:60:13: warning: unused variable 'ypos' [-Wunused-variable]
+   60 |         int ypos = 0;
+      |             ^~~~
+../src/main.c:59:13: warning: unused variable 'xpos' [-Wunused-variable]
+   59 |         int xpos = 0;
+      |             ^~~~
+../src/main.c:58:13: warning: unused variable 'down' [-Wunused-variable]
+   58 |         int down = 1;
+      |             ^~~~
+../src/main.c:57:13: warning: unused variable 'right' [-Wunused-variable]
+   57 |         int right = 1;
+      |             ^~~~~
+../src/main.c:52:13: warning: unused variable 'stride' [-Wunused-variable]
+   52 |         u32 stride = dispCtrl.stride / 4;
+      |             ^~~~~~
+Finished building: ../src/main.c
+ 
+Building target: renderer.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "renderer.elf" ./src/zybo_z7_hdmi/display_ctrl.o ./src/zybo_z7_hdmi/dynclk.o  ./src/rasterizer/draw.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: renderer.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size renderer.elf  |tee "renderer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80923	   1924	10393824	10476671	 9fdc7f	renderer.elf
+Finished building: renderer.elf.size
+ 
+
+04:31:49 Build Finished (took 221ms)
+

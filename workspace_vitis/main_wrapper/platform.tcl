@@ -13,8 +13,10 @@ platform create -name {main_wrapper}\
 -out {/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis}
 
 platform write
-domain create -name {linux_ps7_cortexa9} -display-name {linux_ps7_cortexa9} -os {linux} -proc {ps7_cortexa9} -runtime {cpp} -arch {32-bit} -support-app {linux_hello_world}
+domain create -name {standalone_ps7_cortexa9_0} -display-name {standalone_ps7_cortexa9_0} -os {standalone} -proc {ps7_cortexa9_0} -runtime {cpp} -arch {32-bit} -support-app {empty_application}
+platform generate -domains 
 platform active {main_wrapper}
 domain active {zynq_fsbl}
-domain active {linux_ps7_cortexa9}
+domain active {standalone_ps7_cortexa9_0}
 platform generate -quick
+platform generate
