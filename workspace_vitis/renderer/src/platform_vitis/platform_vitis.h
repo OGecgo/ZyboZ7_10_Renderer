@@ -8,11 +8,15 @@
 #include "../zybo_z7_hdmi/vga_modes.h"
 
 #include "xil_types.h"
+#include "xuartps.h"
+
+// data about size of monitors
+#define sizeType1280x720() (&VMODE_1280x720)
 
 
 typedef struct Platform {
-    u32 width, height;
     DisplayCtrl dispCtrl;
+    XUartPs uart;
     bool running;
 
     u32* frame;
@@ -21,9 +25,9 @@ typedef struct Platform {
     // LARGE_INTEGER prev;    
 
 
-    // uint8_t keys[256];           //pressed
-    // uint8_t keys_pressed[256];   //down once
-    // uint8_t keys_released[256];  //up once
+    uint8_t keys[256];           //pressed
+    uint8_t keys_pressed[256];   //down once
+    uint8_t keys_released[256];  //up once
 
 } Platform;
 
@@ -50,10 +54,6 @@ void  Platform_Shutdown(Platform* plat);
 //     return p->keys_released[vk] != 0;
 // }
 
-// Size types
-// const void* sizeType1280x720(){
-//     return &VMODE_1280x720;
-// }
 
 // added only for vitis project
 // if you want you can set your size from vga_modules header

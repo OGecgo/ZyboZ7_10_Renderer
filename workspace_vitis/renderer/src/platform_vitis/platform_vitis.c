@@ -6,11 +6,8 @@
 #include "xstatus.h"
 
 
-// for now no input
-
-// Platform* platRef;
-
-// static LRESULT CALLBACK MainWndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp){
+Platform* platRef;
+// static void MainWndProc(){
 //     switch (msg) {
 //     case WM_CREATE:
 //         return 0;
@@ -71,9 +68,8 @@
 //PUBLIC API
 bool Platform_Init(Platform *p, const void* size){
     if (!p) return false;
-    p->width  = ((VideoMode *)size)->width;
-    p->height = ((VideoMode *)size)->height;
-    p->size_frame_bytes = p->width * p->height * sizeof(u32);
+    int width  = ((VideoMode *)size)->width;
+    p->size_frame_bytes = width * ((VideoMode *)size)->height * sizeof(u32);
     
     // static u32 frameBuf[DISPLAY_NUM_FRAMES][1280*720] __attribute__((aligned(0x20)));
     static void *pFrames[DISPLAY_NUM_FRAMES];
@@ -83,7 +79,7 @@ bool Platform_Init(Platform *p, const void* size){
     
     
     // initialize display control
-    if (DisplayInitialize(&p->dispCtrl, XPAR_AXIVDMA_0_DEVICE_ID, XPAR_VTC_0_DEVICE_ID, XPAR_HDMI_AXI_DYNCLK_0_BASEADDR, pFrames, p->width*sizeof(u32)) != XST_SUCCESS) {
+    if (DisplayInitialize(&p->dispCtrl, XPAR_AXIVDMA_0_DEVICE_ID, XPAR_VTC_0_DEVICE_ID, XPAR_HDMI_AXI_DYNCLK_0_BASEADDR, pFrames, width*sizeof(u32)) != XST_SUCCESS) {
         printf("Failed to initialize display\n");
         return false;
     }
@@ -114,7 +110,22 @@ bool Platform_Init(Platform *p, const void* size){
 
     p->running = true;
 
-    // platRef = p;
+    // initialize the keyboard conection
+    platRef = p;
+    XUartPs_Config* config = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
+    if (config == NULL) {
+        printf("Failed to lookupConfig");
+        return false;
+    }
+
+    s32 Status = XUartPs_CfgInitialize(&p->uart, config, config->BaseAddress);
+    if (Status != XST_SUCCESS) {
+        printf("Failed initialize cfg");
+        return false;
+    }
+    
+    // Set baud rate to 115200
+    XUartPs_SetBaudRate(&p->uart, 115200);
 
     // for now timer dont exist
     // Attach high‑res timer
@@ -156,7 +167,7 @@ void Platform_BlitBuffer(Platform *p, const uint32_t *src){
     p->frame = (u32 *)p->dispCtrl.framePtr[!p->dispCtrl.curFrame];
 
     // //draw
-	memcpy(p->frame, src, p->width * p->height * sizeof(u32));
+	memcpy(p->frame, src, p->size_frame_bytes);
 
 	// Flush everything out to DDR from the cache
 	Xil_DCacheFlush();
