@@ -1,8 +1,3 @@
-/**
- * Example of using the Digilent display drivers for Zybo Z7 HDMI output, with animation
- * Russell Joyce, 11/03/2019
- */
-
 #include <stdio.h>
 
 #include "platform_vitis/platform_vitis.h"
@@ -61,23 +56,18 @@ int main(void) {
 			// Clear the entire frame to white (inefficient, but it works)
 			memset(setFrame, 0xFF, p.size_frame_bytes);
 
+			// bad test 
 			drawFucn(&x, &y, &back, p.dispCtrl.vMode.width, p.dispCtrl.vMode.height, setFrame);
+					// test key inputs
+			Platform_PumpEvents(&p);
+			// if (IsKeyDown(&p, 'a') || IsKeyDown(&p, 'A')){
+			// 	printf("hello world - KeyDown event triggered\n");
+			// }
+			if (IsKeyPressed(&p, 'a') || IsKeyPressed(&p, 'A')){
+				printf("Key 'a' is being held down\n");
+			}
+			printf("%f \n", Platform_GetDeltaTime(&p));
 			
-			// test key inputs
-			if(XUartPs_IsReceiveData(p.uart.Config.BaseAddress)){
-				switch (XUartPs_ReadReg(p.uart.Config.BaseAddress, XUARTPS_FIFO_OFFSET))
-				{
-				case 'A':
-				case 'a':
-					x = 0;
-					break;
-				
-				case 'D':
-				case 'd':
-					x += 50;
-					break;
-				}
-			} 
 			// update buffer and present
             Platform_BlitBuffer(&p, setFrame);
 	}

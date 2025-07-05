@@ -24,9 +24,8 @@ typedef struct Platform {
     int size_frame_bytes;
 
     //timer
-    XTime time;
-    u64 freq;
-    u64 prev;    
+    XTime freq_frame;
+    XTime prev_frame;    
 
     uint8_t keys[256];           //pressed
     uint8_t keys_pressed[256];   //down once
@@ -54,9 +53,6 @@ static inline int IsKeyDown(const Platform* p, uint8_t vk){
     return p->keys_pressed[vk] != 0;
 }
 static inline int IsKeyUp(const Platform* p, uint8_t vk){
-    return p->keys_released[vk] != 0;
+    return p->keys_released[vk] != 0;  // Исправлено: было != 1
 }
 
-
-// added only for vitis project
-// if you want you can set your size from vga_modules header

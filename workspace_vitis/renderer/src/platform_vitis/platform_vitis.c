@@ -5,64 +5,6 @@
 #include "xparameters.h"
 #include "xstatus.h"
 
-Platform* platRef;
-// static void MainWndProc(){
-//     switch (msg) {
-//     case WM_CREATE:
-//         return 0;
-
-//     case WM_PAINT: {
-//         PAINTSTRUCT ps;
-//         BeginPaint(hwnd, &ps);
-//         if(platRef) {
-//             HDC mem = CreateCompatibleDC(ps.hdc);
-//             SelectObject(mem, platRef->hBitmap);
-//             BitBlt(ps.hdc, 0, 0, platRef->width, platRef->height, mem, 0, 0, SRCCOPY);
-//             DeleteDC(mem);
-//         }
-            
-//         EndPaint(hwnd, &ps);
-//         return 0; }
-
-
-//     case WM_KEYDOWN:
-//     case WM_SYSKEYDOWN: {
-//         if (platRef) {
-//             uint8_t keyCode = (uint8_t)wp;
-
-//             //lParam bit 30 == 0  -> first physical press
-//             if ((lp & (1 << 30)) == 0) {
-//                 platRef->keys_pressed[keyCode] = 1;
-//             }
-//             platRef->keys[keyCode] = 1;
-//         }
-//         return 0;
-//     }
-
-//     case WM_KEYUP:
-//     case WM_SYSKEYUP: {
-//         if (platRef) {
-//             uint8_t keyCode = (uint8_t)wp;
-
-//             platRef->keys[keyCode] = 0;  
-//             platRef->keys_released[keyCode] = 1;
-//         }
-//         return 0;
-//     }
-
-
-
-//     case WM_DESTROY:
-//         if(platRef){
-//             platRef->running = false;
-//         }
-//         return 0;
-//     }
-//     return DefWindowProcW(hwnd, msg, wp, lp);
-// }
-
-
-
 
 //PUBLIC API
 bool Platform_Init(Platform *p, const void* size){
@@ -106,11 +48,7 @@ bool Platform_Init(Platform *p, const void* size){
     printf("Current Resolution: %s\n", p->dispCtrl.vMode.label);
     printf("Pixel Clock Frequency: %.3fMHz\n", p->dispCtrl.pxlFreq);
 
-
-    p->running = true;
-
     // initialize the keyboard conection
-    platRef = p;
     XUartPs_Config* config = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
     if (config == NULL) {
         printf("Failed to lookupConfig");
@@ -126,10 +64,13 @@ bool Platform_Init(Platform *p, const void* size){
     // Set baud rate to 115200
     XUartPs_SetBaudRate(&p->uart, 115200);
 
-    // Attach high‑res timer
-    XTime_GetTime(&p->time);
-    p->prev = COUNTS_PER_SECOND;
+    // set times
+    p->prev_frame = 0;
+    XTime_GetTime(&p->freq_frame);
 
+
+    // start run
+    p->running = true;
 
     // 1‑ms sleep resolution for smoother pacing
     //timeBeginPeriod(1);
@@ -137,23 +78,30 @@ bool Platform_Init(Platform *p, const void* size){
 }
 
 void Platform_PumpEvents(Platform *p){
-    //Clear Input
+    //Clear Input events 
     memset(p->keys_pressed, 0, 256);
     memset(p->keys_released, 0, 256);
 
-
-    // MSG msg;
-    // while(PeekMessageW(&msg, NULL, 0, 0, PM_REMOVE)) {
-    //     if (msg.message == WM_QUIT) p->running = false;
-    //     TranslateMessage(&msg);
-    //     DispatchMessageW(&msg);
-    // }
+    // check event
+    if(XUartPs_IsReceiveData(p->uart.Config.BaseAddress)){
+        u8 keyCode = (u8)XUartPs_ReadReg(p->uart.Config.BaseAddress, XUARTPS_FIFO_OFFSET);
+        if (p->keys[keyCode] == 0){
+            p->keys_pressed[keyCode] = 1;  
+        }
+        p->keys[keyCode] = 1; 
+    }else{
+        // decides whether it will be a prestd or unpresd event
+        memset(p->keys, 0, 256);
+    }
+    
 }
 
 float Platform_GetDeltaTime(Platform *p){
-    double now = p->prev;
-    float dt = (now - p->prev) / p->dispCtrl.pxlFreq;
-    p->prev = now;
+    p->prev_frame = p->freq_frame;
+    XTime_GetTime(&p->freq_frame);
+    
+    // Convert to microseconds (assuming 333MHz timer)
+    float dt = (float)(p->freq_frame - p->prev_frame) / (float)((XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / 1000000.0));
     return dt;
 }
 
@@ -176,7 +124,7 @@ void Platform_BlitBuffer(Platform *p, const uint32_t *src){
 	DisplayWaitForSync(&p->dispCtrl);
 }   
 
-void Platform_Shutdown(Platform *p){
+void Platform_Shutdown(Platform *p){ // have not platform shutdown on board
     // DeleteObject(p->hBitmap);
     //timeEndPeriod(1);
 }
