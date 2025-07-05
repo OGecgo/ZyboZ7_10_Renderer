@@ -1,29 +1,9 @@
 Nothing to build in platform 'main_wrapper'
 
-19:57:27 **** Incremental Build of configuration Debug for project renderer ****
+21:41:57 **** Incremental Build of configuration Debug for project renderer ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
  
 make --no-print-directory main-build
-Building file: ../src/platform_vitis/platform_vitis.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_vitis/platform_vitis.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform_vitis/platform_vitis.d" -MT"src/platform_vitis/platform_vitis.o" -o "src/platform_vitis/platform_vitis.o" "../src/platform_vitis/platform_vitis.c"
-Finished building: ../src/platform_vitis/platform_vitis.c
- 
-Building file: ../src/main.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: renderer.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "renderer.elf" ./src/zybo_z7_hdmi/display_ctrl.o ./src/zybo_z7_hdmi/dynclk.o  ./src/rasterizer/draw.o  ./src/platform_vitis/platform_vitis.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: renderer.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size renderer.elf  |tee "renderer.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  86351	   1940	37255616	37343907	239d2a3	renderer.elf
-Finished building: renderer.elf.size
- 
+make[1]: Nothing to be done for 'main-build'.

@@ -56,18 +56,28 @@ int main(void) {
 			// Clear the entire frame to white (inefficient, but it works)
 			memset(setFrame, 0xFF, p.size_frame_bytes);
 
-			// bad test 
+			// draw test
 			drawFucn(&x, &y, &back, p.dispCtrl.vMode.width, p.dispCtrl.vMode.height, setFrame);
-					// test key inputs
+			
+			
+			// test key inputs
 			Platform_PumpEvents(&p);
-			// if (IsKeyDown(&p, 'a') || IsKeyDown(&p, 'A')){
-			// 	printf("hello world - KeyDown event triggered\n");
-			// }
 			if (IsKeyPressed(&p, 'a') || IsKeyPressed(&p, 'A')){
-				// printf("Key 'a' is being held down\n");
+				x -= 10;
+			}
+			if (IsKeyPressed(&p, 'd') || IsKeyPressed(&p, 'd')){
+				x += 10;
+			}
+			if (IsKeyPressed(&p, 'w') || IsKeyPressed(&p, 'W')){
+				y -= 10;
+			}
+			if (IsKeyPressed(&p, 's') || IsKeyPressed(&p, 'S')){
+				y += 10;
 			}
 
-			// printf("%f \n", 1 / (Platform_GetDeltaTime(&p) / 1000000));
+
+			// fps test
+			printf("%f \n", 1 / (Platform_GetDeltaTime(&p) / 1000000));
 			
 			// update buffer and present
             Platform_BlitBuffer(&p, setFrame);
