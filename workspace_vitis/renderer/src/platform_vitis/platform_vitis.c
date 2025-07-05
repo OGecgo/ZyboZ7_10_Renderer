@@ -5,7 +5,6 @@
 #include "xparameters.h"
 #include "xstatus.h"
 
-
 Platform* platRef;
 // static void MainWndProc(){
 //     switch (msg) {
@@ -127,10 +126,10 @@ bool Platform_Init(Platform *p, const void* size){
     // Set baud rate to 115200
     XUartPs_SetBaudRate(&p->uart, 115200);
 
-    // for now timer dont exist
     // Attach high‑res timer
-    // QueryPerformanceFrequency(&p->freq);
-    // QueryPerformanceCounter(&p->prev);
+    XTime_GetTime(&p->time);
+    p->prev = COUNTS_PER_SECOND;
+
 
     // 1‑ms sleep resolution for smoother pacing
     //timeBeginPeriod(1);
@@ -139,8 +138,8 @@ bool Platform_Init(Platform *p, const void* size){
 
 void Platform_PumpEvents(Platform *p){
     //Clear Input
-    // memset(p->keys_pressed, 0, 256);
-    // memset(p->keys_released, 0, 256);
+    memset(p->keys_pressed, 0, 256);
+    memset(p->keys_released, 0, 256);
 
 
     // MSG msg;
@@ -152,12 +151,10 @@ void Platform_PumpEvents(Platform *p){
 }
 
 float Platform_GetDeltaTime(Platform *p){
-    // LARGE_INTEGER now;
-    // QueryPerformanceCounter(&now);
-    // float dt = (float)(now.QuadPart - p->prev.QuadPart) / (float)p->freq.QuadPart;
-    // p->prev = now;
-    // return dt;
-    return 0.0f;
+    double now = p->prev;
+    float dt = (now - p->prev) / p->dispCtrl.pxlFreq;
+    p->prev = now;
+    return dt;
 }
 
 void Platform_BlitBuffer(Platform *p, const uint32_t *src){

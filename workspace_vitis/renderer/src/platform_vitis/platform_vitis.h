@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "xil_types.h"
 #include "xil_cache.h"
+#include "xtime_l.h"
 
 #include "../zybo_z7_hdmi/display_ctrl.h"
 #include "../zybo_z7_hdmi/vga_modes.h"
@@ -21,9 +22,11 @@ typedef struct Platform {
 
     u32* frame;
     int size_frame_bytes;
-    // LARGE_INTEGER freq;   //timer
-    // LARGE_INTEGER prev;    
 
+    //timer
+    XTime time;
+    u64 freq;
+    u64 prev;    
 
     uint8_t keys[256];           //pressed
     uint8_t keys_pressed[256];   //down once
@@ -44,15 +47,15 @@ void  Platform_Shutdown(Platform* plat);
 
 
 //INPUT
-// static inline int IsKeyPressed(const Platform* p, uint8_t vk){
-//     return p->keys[vk] != 0;
-// }
-// static inline int IsKeyDown(const Platform* p, uint8_t vk){
-//     return p->keys_pressed[vk] != 0;
-// }
-// static inline int IsKeyUp(const Platform* p, uint8_t vk){
-//     return p->keys_released[vk] != 0;
-// }
+static inline int IsKeyPressed(const Platform* p, uint8_t vk){
+    return p->keys[vk] != 0;
+}
+static inline int IsKeyDown(const Platform* p, uint8_t vk){
+    return p->keys_pressed[vk] != 0;
+}
+static inline int IsKeyUp(const Platform* p, uint8_t vk){
+    return p->keys_released[vk] != 0;
+}
 
 
 // added only for vitis project
