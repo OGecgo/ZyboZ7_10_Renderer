@@ -8,5 +8,6 @@
         "ranges": "c",
         "span": "c",
         "valarray": "c"
-    }
+    },
+    "cmake.sourceDirectory": "/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/zynq_fsbl"
 }

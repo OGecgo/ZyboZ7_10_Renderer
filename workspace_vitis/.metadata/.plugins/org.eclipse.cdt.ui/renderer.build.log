@@ -1,4 +1,4 @@
-18:29:11 **** Incremental Build of configuration Debug for project renderer ****
+19:57:27 **** Incremental Build of configuration Debug for project renderer ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -22,9 +22,9 @@ Finished building target: renderer.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size renderer.elf  |tee "renderer.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  86407	   1940	37255616	37343963	239d2db	renderer.elf
+  86351	   1940	37255616	37343907	239d2a3	renderer.elf
 Finished building: renderer.elf.size
  
 
-18:29:11 Build Finished (took 265ms)
+19:57:27 Build Finished (took 263ms)
 

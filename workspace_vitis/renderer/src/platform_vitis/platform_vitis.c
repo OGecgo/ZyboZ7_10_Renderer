@@ -77,33 +77,31 @@ bool Platform_Init(Platform *p, const void* size){
     return true;
 }
 
+float Platform_GetDeltaTime(Platform *p){
+    p->prev_frame = p->freq_frame;
+    XTime_GetTime(&p->freq_frame);
+    
+    // Convert to microseconds ( 333MHz timer)
+    float dt = (float)(p->freq_frame - p->prev_frame) / (float)((XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / 1000000.0));
+    return dt;
+}
+
+
 void Platform_PumpEvents(Platform *p){
     //Clear Input events 
-    memset(p->keys_pressed, 0, 256);
-    memset(p->keys_released, 0, 256);
+    // memset(p->keys_pressed, 0, 256);
+    // memset(p->keys_released, 0, 256);
 
     // check event
     if(XUartPs_IsReceiveData(p->uart.Config.BaseAddress)){
         u8 keyCode = (u8)XUartPs_ReadReg(p->uart.Config.BaseAddress, XUARTPS_FIFO_OFFSET);
-        if (p->keys[keyCode] == 0){
-            p->keys_pressed[keyCode] = 1;  
-        }
         p->keys[keyCode] = 1; 
     }else{
-        // decides whether it will be a prestd or unpresd event
         memset(p->keys, 0, 256);
     }
     
 }
 
-float Platform_GetDeltaTime(Platform *p){
-    p->prev_frame = p->freq_frame;
-    XTime_GetTime(&p->freq_frame);
-    
-    // Convert to microseconds (assuming 333MHz timer)
-    float dt = (float)(p->freq_frame - p->prev_frame) / (float)((XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / 1000000.0));
-    return dt;
-}
 
 void Platform_BlitBuffer(Platform *p, const uint32_t *src){
     if (!p || !src) return;

@@ -64,9 +64,10 @@ int main(void) {
 			// 	printf("hello world - KeyDown event triggered\n");
 			// }
 			if (IsKeyPressed(&p, 'a') || IsKeyPressed(&p, 'A')){
-				printf("Key 'a' is being held down\n");
+				// printf("Key 'a' is being held down\n");
 			}
-			printf("%f \n", Platform_GetDeltaTime(&p));
+
+			// printf("%f \n", 1 / (Platform_GetDeltaTime(&p) / 1000000));
 			
 			// update buffer and present
             Platform_BlitBuffer(&p, setFrame);

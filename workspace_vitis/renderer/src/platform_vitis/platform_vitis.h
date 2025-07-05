@@ -27,9 +27,9 @@ typedef struct Platform {
     XTime freq_frame;
     XTime prev_frame;    
 
-    uint8_t keys[256];           //pressed
-    uint8_t keys_pressed[256];   //down once
-    uint8_t keys_released[256];  //up once
+    uint8_t keys[256];              //pressed
+    // uint8_t keys_pressed[256];   //down once // we cannot have that checks. only if it pressed
+    // uint8_t keys_released[256];  //up once
 
 } Platform;
 
@@ -41,7 +41,7 @@ void  Platform_PumpEvents(Platform* plat);
 float Platform_GetDeltaTime(Platform* plat);
 /*  Copy src RGBA32 buffer (w×h) into the DIBSection & schedule WM_PAINT. */
 void  Platform_BlitBuffer(Platform* plat, const uint32_t* src);
-/*  Free GDI objects and restore timer granularity. */
+/*  on this project they do nothing. */
 void  Platform_Shutdown(Platform* plat);
 
 
@@ -50,9 +50,9 @@ static inline int IsKeyPressed(const Platform* p, uint8_t vk){
     return p->keys[vk] != 0;
 }
 static inline int IsKeyDown(const Platform* p, uint8_t vk){
-    return p->keys_pressed[vk] != 0;
+    return false;
 }
 static inline int IsKeyUp(const Platform* p, uint8_t vk){
-    return p->keys_released[vk] != 0;  // Исправлено: было != 1
+    return false; 
 }
 
