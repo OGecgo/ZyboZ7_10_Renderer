@@ -1,6 +1,6 @@
 Nothing to build in platform 'main_wrapper'
 
-13:09:10 **** Incremental Build of configuration Debug for project renderer ****
+04:55:48 **** Incremental Build of configuration Debug for project renderer ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,6 +9,17 @@ make --no-print-directory main-build
 Building file: ../src/platform_vitis/platform_vitis.c
 Invoking: ARM v7 gcc compiler
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_vitis/platform_vitis.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vitis/main_wrapper/export/main_wrapper/sw/main_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform_vitis/platform_vitis.d" -MT"src/platform_vitis/platform_vitis.o" -o "src/platform_vitis/platform_vitis.o" "../src/platform_vitis/platform_vitis.c"
+../src/platform_vitis/platform_vitis.c: In function 'Platform_Init':
+../src/platform_vitis/platform_vitis.c:88:122: warning: passing argument 5 of 'DisplayInitialize' from incompatible pointer type [-Wincompatible-pointer-types]
+   88 |     if (DisplayInitialize(&p->dispCtrl, XPAR_AXIVDMA_0_DEVICE_ID, XPAR_VTC_0_DEVICE_ID, XPAR_HDMI_AXI_DYNCLK_0_BASEADDR, pFrames, p->width*sizeof(u32)) != XST_SUCCESS) {
+      |                                                                                                                          ^~~~~~~
+      |                                                                                                                          |
+      |                                                                                                                          u32 ** {aka long unsigned int **}
+In file included from ../src/platform_vitis/platform_vitis.h:7,
+                 from ../src/platform_vitis/platform_vitis.c:1:
+../src/platform_vitis/../zybo_z7_hdmi/display_ctrl.h:105:90: note: expected 'void **' but argument is of type 'u32 **' {aka 'long unsigned int **'}
+  105 | int DisplayInitialize(DisplayCtrl *dispPtr, u16 vdmaId, u16 vtcId, u32 dynClkAddr, void *framePtr[DISPLAY_NUM_FRAMES], u32 stride);
+      |                                                                                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Finished building: ../src/platform_vitis/platform_vitis.c
  
 Building target: renderer.elf
@@ -19,6 +30,6 @@ Finished building target: renderer.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size renderer.elf  |tee "renderer.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  82349	   1924	7398640	7482913	 722e21	renderer.elf
+  82603	   1932	15577920	15662455	 eefd77	renderer.elf
 Finished building: renderer.elf.size
  

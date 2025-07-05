@@ -1,8 +1,10 @@
 #include "platform_vitis.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "xparameters.h"
 #include "xstatus.h"
+
 
 // for now no input
 
@@ -69,55 +71,50 @@
 //PUBLIC API
 bool Platform_Init(Platform *p, const void* size){
     if (!p) return false;
-
-    // Initialize frame buffers properly - need static allocation for alignment
-    static u32 frameBuf[DISPLAY_NUM_FRAMES][1280*720] __attribute__((aligned(0x20)));
-    static void *pFrames[DISPLAY_NUM_FRAMES];
-    static DisplayCtrl dispCtrl;
+    p->width  = ((VideoMode *)size)->width;
+    p->height = ((VideoMode *)size)->height;
+    p->size_frame_bytes = p->width * p->height * sizeof(u32);
     
-    // Initialize array of pointers to frame buffers
+    // static u32 frameBuf[DISPLAY_NUM_FRAMES][1280*720] __attribute__((aligned(0x20)));
+    static void *pFrames[DISPLAY_NUM_FRAMES];
     for (int i = 0; i < DISPLAY_NUM_FRAMES; i++) {
-        pFrames[i] = frameBuf[i];
+        pFrames[i] = aligned_alloc(0x20, p->size_frame_bytes);
     }
     
-    p->dispCtrl = &dispCtrl;
     
     // initialize display control
-    if (DisplayInitialize(p->dispCtrl, XPAR_AXIVDMA_0_DEVICE_ID, XPAR_VTC_0_DEVICE_ID, XPAR_HDMI_AXI_DYNCLK_0_BASEADDR, pFrames, ((VideoMode *)size)->width*4) != XST_SUCCESS) {
+    if (DisplayInitialize(&p->dispCtrl, XPAR_AXIVDMA_0_DEVICE_ID, XPAR_VTC_0_DEVICE_ID, XPAR_HDMI_AXI_DYNCLK_0_BASEADDR, pFrames, p->width*sizeof(u32)) != XST_SUCCESS) {
         printf("Failed to initialize display\n");
         return false;
     }
 
 	// Start with the first frame buffer (of two)
-	if (DisplayChangeFrame(p->dispCtrl, 0) != XST_SUCCESS) {
+	if (DisplayChangeFrame(&p->dispCtrl, 0) != XST_SUCCESS) {
         printf("Failed to change frame\n");
         return false;
     }
 
     // set resolution
-    if (DisplaySetMode(p->dispCtrl, (VideoMode *)size) != XST_SUCCESS) {
+    if (DisplaySetMode(&p->dispCtrl, (VideoMode *)size) != XST_SUCCESS) {
         printf("Failed to set display mode\n");
         return false;
     }
 
 	// Enable video output
-	if (DisplayStart(p->dispCtrl) != XST_SUCCESS) {
+	if (DisplayStart(&p->dispCtrl) != XST_SUCCESS) {
         printf("Failed to start display\n");
         return false;
     }
 
     // memset(p, 0, sizeof *p); den katalavenw giati ginete gia afto pros to paron comment
     printf("HDMI output enabled\n");
-    printf("Current Resolution: %s\n", p->dispCtrl->vMode.label);
-    printf("Pixel Clock Frequency: %.3fMHz\n", p->dispCtrl->pxlFreq);
+    printf("Current Resolution: %s\n", p->dispCtrl.vMode.label);
+    printf("Pixel Clock Frequency: %.3fMHz\n", p->dispCtrl.pxlFreq);
 
 
-    p->width  = p->dispCtrl->vMode.width;
-    p->height = p->dispCtrl->vMode.height;
     p->running = true;
-    p->buff = p->dispCtrl->curFrame;
 
-    // platRef = p;buff
+    // platRef = p;
 
     // for now timer dont exist
     // Attach high‑res timer
@@ -152,55 +149,24 @@ float Platform_GetDeltaTime(Platform *p){
     return 0.0f;
 }
 
-
 void Platform_BlitBuffer(Platform *p, const uint32_t *src){
-    // // if (!p || !src) return;
-    
-    // // size_t bytes = (size_t)p->width * (size_t)p->height * sizeof(uint32_t);
-
-    // // Switch to the next buffer (toggle between 0 and 1)
-    // p->buff = !p->buff;
-    // u32* frame = (u32 *)p->dispCtrl->framePtr[p->buff];
-    
-    // // Copy the source buffer to the frame buffer
-    // // memset(pixels, 0xFF, 1280 * 720 * sizeof(u32));
-    // // memcpy(pixels, src, bytes);
-
-
-
-    // // for (int y = 0; y < 720; y++) {
-	// // 	for (int x = 0; x < 1280; x++) {
-
-	// // 		pixels[y*1280 + x] = (0xFFFFFFFF << BIT_DISPLAY_RED) | (0xFFFFFFFF << BIT_DISPLAY_GREEN) | (0xFFFFFFFF << BIT_DISPLAY_BLUE);
-	// // 	}
-	// // }
-    // memset(frame, 0xFF, 720 * 1280*4);
-
-	// // Flush everything out to DDR from the cache
-	// Xil_DCacheFlush();
-	// // Switch active frame to the back buffer (will take place during next vertical blanking period)
-	// DisplayChangeFrame(p->dispCtrl, p->buff);
-	// // Wait for the frame to switch before continuing (so after current frame has been drawn)
-	// DisplayWaitForSync(p->dispCtrl);
+    if (!p || !src) return;
 
     // Switch the frame we're modifying to be the back buffer (1 to 0, or 0 to 1)
-	p->buff = !p->buff;
-    DisplayCtrl d = *(p->dispCtrl);
-	u32* frame = (u32 *)d.framePtr[p->buff];
+    p->frame = (u32 *)p->dispCtrl.framePtr[!p->dispCtrl.curFrame];
 
-	// Clear the entire frame to white (inefficient, but it works)
-	memset(frame, 0xFF, 1280*720*4);
-
+    // //draw
+	memcpy(p->frame, src, p->width * p->height * sizeof(u32));
 
 	// Flush everything out to DDR from the cache
 	Xil_DCacheFlush();
 
 	// Switch active frame to the back buffer (will take place during next vertical blanking period)
-	DisplayChangeFrame(&d, p->buff);
+	DisplayChangeFrame(&p->dispCtrl, !p->dispCtrl.curFrame);
 
 	// Wait for the frame to switch before continuing (so after current frame has been drawn)
-	DisplayWaitForSync(&d);
-}
+	DisplayWaitForSync(&p->dispCtrl);
+}   
 
 void Platform_Shutdown(Platform *p){
     // DeleteObject(p->hBitmap);

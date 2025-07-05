@@ -11,20 +11,19 @@
 
 
 typedef struct Platform {
-    int width, height;
-    DisplayCtrl* dispCtrl;
+    u32 width, height;
+    DisplayCtrl dispCtrl;
     bool running;
 
-    uint32_t* hBitmap[DISPLAY_NUM_FRAMES];
-    u32 buff; // two buffers
-
+    u32* frame;
+    int size_frame_bytes;
     // LARGE_INTEGER freq;   //timer
     // LARGE_INTEGER prev;    
 
 
-    uint8_t keys[256];           //pressed
-    uint8_t keys_pressed[256];   //down once
-    uint8_t keys_released[256];  //up once
+    // uint8_t keys[256];           //pressed
+    // uint8_t keys_pressed[256];   //down once
+    // uint8_t keys_released[256];  //up once
 
 } Platform;
 
@@ -41,15 +40,15 @@ void  Platform_Shutdown(Platform* plat);
 
 
 //INPUT
-static inline int IsKeyPressed(const Platform* p, uint8_t vk){
-    return p->keys[vk] != 0;
-}
-static inline int IsKeyDown(const Platform* p, uint8_t vk){
-    return p->keys_pressed[vk] != 0;
-}
-static inline int IsKeyUp(const Platform* p, uint8_t vk){
-    return p->keys_released[vk] != 0;
-}
+// static inline int IsKeyPressed(const Platform* p, uint8_t vk){
+//     return p->keys[vk] != 0;
+// }
+// static inline int IsKeyDown(const Platform* p, uint8_t vk){
+//     return p->keys_pressed[vk] != 0;
+// }
+// static inline int IsKeyUp(const Platform* p, uint8_t vk){
+//     return p->keys_released[vk] != 0;
+// }
 
 // Size types
 // const void* sizeType1280x720(){
