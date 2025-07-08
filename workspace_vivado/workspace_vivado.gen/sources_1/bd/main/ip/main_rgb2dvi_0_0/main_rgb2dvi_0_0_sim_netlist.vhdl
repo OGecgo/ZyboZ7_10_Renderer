@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 -- Date        : Wed Jul  2 17:38:02 2025
 -- Host        : go running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim
---               /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rgb2dvi_0_0/main_rgb2dvi_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_rgb2dvi_0_0 -prefix
+--               main_rgb2dvi_0_0_ main_rgb2dvi_0_0_sim_netlist.vhdl
 -- Design      : main_rgb2dvi_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity main_rgb2dvi_0_0_OutputSERDES is
     PixelClk : in STD_LOGIC;
     aRst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rgb2dvi_0_0_OutputSERDES : entity is "OutputSERDES";
 end main_rgb2dvi_0_0_OutputSERDES;
 
 architecture STRUCTURE of main_rgb2dvi_0_0_OutputSERDES is
@@ -660,8 +658,6 @@ entity main_rgb2dvi_0_0_SyncAsync is
     PixelClk : in STD_LOGIC;
     AS : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rgb2dvi_0_0_SyncAsync : entity is "SyncAsync";
 end main_rgb2dvi_0_0_SyncAsync;
 
 architecture STRUCTURE of main_rgb2dvi_0_0_SyncAsync is
@@ -713,8 +709,6 @@ entity main_rgb2dvi_0_0_TMDS_Encoder is
     vid_pVDE : in STD_LOGIC;
     vid_pData : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rgb2dvi_0_0_TMDS_Encoder : entity is "TMDS_Encoder";
 end main_rgb2dvi_0_0_TMDS_Encoder;
 
 architecture STRUCTURE of main_rgb2dvi_0_0_TMDS_Encoder is
@@ -4495,8 +4489,6 @@ entity main_rgb2dvi_0_0_ResetBridge is
     aRst_n : in STD_LOGIC;
     PixelClk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rgb2dvi_0_0_ResetBridge : entity is "ResetBridge";
 end main_rgb2dvi_0_0_ResetBridge;
 
 architecture STRUCTURE of main_rgb2dvi_0_0_ResetBridge is
@@ -4538,8 +4530,6 @@ entity main_rgb2dvi_0_0_rgb2dvi is
     PixelClk : in STD_LOGIC;
     SerialClk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rgb2dvi_0_0_rgb2dvi : entity is "rgb2dvi";
   attribute kClkPrimitive : string;
   attribute kClkPrimitive of main_rgb2dvi_0_0_rgb2dvi : entity is "PLL";
   attribute kClkRange : integer;

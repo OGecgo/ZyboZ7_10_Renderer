@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Wed Jul  2 17:38:04 2025
+// Date        : Wed Jul  2 17:38:03 2025
 // Host        : go running 64-bit Arch Linux
-// Command     : write_verilog -force -mode synth_stub
-//               /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_auto_pc_0/main_axi_mem_intercon_imp_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top main_axi_mem_intercon_imp_auto_pc_0 -prefix
+//               main_axi_mem_intercon_imp_auto_pc_0_ main_axi_mem_intercon_imp_auto_pc_0_stub.v
 // Design      : main_axi_mem_intercon_imp_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

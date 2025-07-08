@@ -1,0 +1,9 @@
+
+# Add only the renderer folder from vitis project
+workspace_vitis/*
+!workspace_vitis/renderer/
+!workspace_vitis/renderer_system/
+
+# Don't ignore specific directories
+!README.md
+

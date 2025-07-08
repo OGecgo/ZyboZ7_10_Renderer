@@ -13,14 +13,12 @@ entity AXI_matrix_mul is
         s_axis_tvalid : in  std_logic;
         s_axis_tlast  : in  std_logic;
         s_axis_tready : out std_logic;
-        -- s_axis_tkeep dont realy need for now;
 
         -- master AXI Stream (ouput)
         m_axis_tdata  : out std_logic_vector(16*floatSize-1 downto 0);
         m_axis_tvalid : out std_logic;
         m_axis_tlast  : out std_logic;
         m_axis_tready : in  std_logic;
-        m_axis_tkeep  : out std_logic_vector(16*floatSize/8-1 downto 0);
 
         -- Clock/Reset
         aclk    : in std_logic;
@@ -37,77 +35,73 @@ architecture Behavioral of AXI_matrix_mul is
         port(
             leftMatrix   : in  std_logic_vector(16*floatSize-1 downto 0);
             rightMatrix  : in  std_logic_vector(16*floatSize-1 downto 0);
-            returnMatrix : out std_logic_vector(16*floatSize-1 downto 0)
+            returnMatrix : out std_logic_vector(16*floatSize-1 downto 0);
+            validation   : out std_logic
             );
     end component;
 
     signal inputMem  : std_logic_vector(16*floatSize-1 downto 0);
-    signal outputMem : std_logic_vector(16*floatSize-1 downto 0);
 
-    signal InOutAxi  : std_logic := '0'; -- 0 is input 1 is output
+    signal outputMem : std_logic_vector(16*floatSize-1 downto 0);
+    signal data_valid : std_logic;
+
+    -- State machine for AXI Stream control
+    type state_type is (IDLE, PROCESSING, OUTPUT_READY);
+    signal state : state_type := IDLE;
+    
 
 begin
 
     -- Instantiation of matrix_mul component
-    matrix_mul_inst : matrix_mul
-        generic map ( floatSize => floatSize )
+    matrix_mul_inst : matrix_mul generic map ( floatSize => floatSize )
         port map (
             leftMatrix   => inputMem,
             rightMatrix  => (others => '0'),
-            returnMatrix => outputMem
+            returnMatrix => outputMem,
+            validation   => data_valid
         );
 
-    -- check send and read data
-    process (aresetn, aclk)
+    -- AXI Stream slave interface (input side)
+    s_axis_tready <= '1' when state = IDLE else '0';
+    
+    -- AXI Stream master interface (output side)  
+    m_axis_tvalid <= '1' when state = OUTPUT_READY else '0';
+    m_axis_tdata  <= outputMem when state = OUTPUT_READY else (others => '0');
+    m_axis_tlast  <= '1' when state = OUTPUT_READY else '0';
+
+    process (aclk, aresetn)
     begin
         if aresetn = '0' then 
-            s_axis_tready <= '0';
-            m_axis_tdata  <= (others => '0');
-            m_axis_tvalid <= '0';
-            m_axis_tlast  <= '0';
-            m_axis_tkeep  <= (others => '0');
-
-            InOutAxi      <= '0'; -- input output mode
+            state <= IDLE;
+            inputMem <= (others => '0');
 
         elsif rising_edge(aclk) then
-
-            -- INPUT MODE
-            if InOutAxi = '0' then
-                -- reset send data
-                m_axis_tvalid <= '0';
-                m_axis_tlast  <= '0';
-                s_axis_tready <= '1'; -- start take data
-
-                -- send one big buffer. that mean tlast if 1 only thed do
-                -- data should be valid
-                if s_axis_tvalid = '1' and s_axis_tlast = '1' then
-                    inputMem      <= s_axis_tdata; -- taka data
-                    InOutAxi      <= '1'; -- move to output mode
-                    s_axis_tready <= '0'; -- stop take data
-                end if;
-
-            else 
-                s_axis_tready <= '0'; -- stop take data
-            end if;
-
-
-
-
-            -- OUTPUT MOD
-            if InOutAxi = '1' then
-                if m_axis_tready = '1'then
-                    m_axis_tdata  <= outputMem; -- send data in one move
-                    m_axis_tvalid <= '1';       -- validation is properly
-                    m_axis_tlast  <= '1';       -- is the last data
-                    InOutAxi      <= '0';       -- reset
-                end if;
-            end if;
+            case state is
+                when IDLE =>
+                    -- Wait for valid input data with tlast
+                    if s_axis_tvalid = '1' and s_axis_tlast = '1' then
+                        inputMem <= s_axis_tdata;
+                        state <= PROCESSING;
+                    end if;
                     
-
+                when PROCESSING =>
+                    -- Wait for processing to complete
+                    if data_valid = '1' then
+                        state <= OUTPUT_READY;
+                    end if;
+                    
+                when OUTPUT_READY =>
+                    -- Wait for master side to accept data
+                    if m_axis_tready = '1' then
+                        state <= IDLE;  -- Ready for next transaction
+                    end if;
+                    
+                when others =>
+                    state <= IDLE;
+            end case;
         end if;
     end process;
 
-    m_axis_tkeep <= (others => '1'); -- dont need for now (check what bits is valid for that block)
 
 end Behavioral;
 

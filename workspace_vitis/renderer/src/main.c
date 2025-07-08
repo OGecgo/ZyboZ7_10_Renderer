@@ -77,7 +77,7 @@ int main(void) {
 
 
 			// fps test
-			printf("%f \n", 1 / (Platform_GetDeltaTime(&p) / 1000000));
+//			printf("%f \n", 1 / (Platform_GetDeltaTime(&p) / 1000000));
 			
 			// update buffer and present
             Platform_BlitBuffer(&p, setFrame);

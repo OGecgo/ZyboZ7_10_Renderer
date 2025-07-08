@@ -1,0 +1,343 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Jul  8 21:06:14 2025
+# Process ID         : 39658
+# Current directory  : /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/operations_inst_0_AXI_matrix_mul_0_0_synth_1
+# Command line       : vivado -log operations_inst_0_AXI_matrix_mul_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source operations_inst_0_AXI_matrix_mul_0_0.tcl
+# Log file           : /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/operations_inst_0_AXI_matrix_mul_0_0_synth_1/operations_inst_0_AXI_matrix_mul_0_0.vds
+# Journal file       : /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/operations_inst_0_AXI_matrix_mul_0_0_synth_1/vivado.jou
+# Running On         : go
+# Platform           : Arch
+# Operating System   : Arch Linux
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz
+# CPU Frequency      : 4087.772 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16537 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 25127 MB
+# Available Virtual  : 17269 MB
+#-----------------------------------------------------------
+source operations_inst_0_AXI_matrix_mul_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/go/Desktop/ZyboZ7_10_Renderer/my_resorces/zybo_z7_hdmi_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+Command: synth_design -top operations_inst_0_AXI_matrix_mul_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39763
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1958.766 ; gain = 419.828 ; free physical = 3688 ; free virtual = 15634
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'operations_inst_0_AXI_matrix_mul_0_0' [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/ip/operations_inst_0_AXI_matrix_mul_0_0/synth/operations_inst_0_AXI_matrix_mul_0_0.vhd:71]
+	Parameter floatSize bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'AXI_matrix_mul' declared at '/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/sources_1/imports/new/AXI_matrix_mul.vhd:6' bound to instance 'U0' of component 'AXI_matrix_mul' [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/ip/operations_inst_0_AXI_matrix_mul_0_0/synth/operations_inst_0_AXI_matrix_mul_0_0.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'AXI_matrix_mul' [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/sources_1/imports/new/AXI_matrix_mul.vhd:29]
+	Parameter floatSize bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'matrix_mul' declared at '/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/sources_1/imports/new/matrix_mul.vhd:6' bound to instance 'matrix_mul_inst' of component 'matrix_mul' [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/sources_1/imports/new/AXI_matrix_mul.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'matrix_mul' [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/sources_1/imports/new/matrix_mul.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'matrix_mul' (0#1) [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/sources_1/imports/new/matrix_mul.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'AXI_matrix_mul' (0#1) [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/sources_1/imports/new/AXI_matrix_mul.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'operations_inst_0_AXI_matrix_mul_0_0' (0#1) [/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/ip/operations_inst_0_AXI_matrix_mul_0_0/synth/operations_inst_0_AXI_matrix_mul_0_0.vhd:71]
+WARNING: [Synth 8-7129] Port rightMatrix[511] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[510] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[509] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[508] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[507] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[506] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[505] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[504] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[503] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[502] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[501] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[500] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[499] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[498] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[497] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[496] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[495] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[494] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[493] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[492] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[491] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[490] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[489] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[488] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[487] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[486] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[485] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[484] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[483] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[482] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[481] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[480] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[479] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[478] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[477] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[476] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[475] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[474] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[473] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[472] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[471] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[470] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[469] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[468] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[467] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[466] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[465] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[464] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[463] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[462] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[461] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[460] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[459] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[458] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[457] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[456] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[455] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[454] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[453] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[452] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[451] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[450] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[449] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[448] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[447] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[446] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[445] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[444] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[443] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[442] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[441] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[440] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[439] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[438] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[437] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[436] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[435] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[434] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[433] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[432] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[431] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[430] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[429] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[428] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[427] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[426] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[425] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[424] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[423] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[422] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[421] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[420] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[419] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[418] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[417] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[416] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[415] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[414] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[413] in module matrix_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rightMatrix[412] in module matrix_mul is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2036.703 ; gain = 497.766 ; free physical = 3601 ; free virtual = 15548
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2054.516 ; gain = 515.578 ; free physical = 3593 ; free virtual = 15540
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2054.516 ; gain = 515.578 ; free physical = 3592 ; free virtual = 15540
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2054.516 ; gain = 0.000 ; free physical = 3593 ; free virtual = 15540
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2164.254 ; gain = 0.000 ; free physical = 3529 ; free virtual = 15479
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2164.254 ; gain = 0.000 ; free physical = 3526 ; free virtual = 15475
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2164.254 ; gain = 625.316 ; free physical = 3575 ; free virtual = 15516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2172.258 ; gain = 633.320 ; free physical = 3575 ; free virtual = 15516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2172.258 ; gain = 633.320 ; free physical = 3575 ; free virtual = 15516
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'AXI_matrix_mul'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+              processing |                              010 |                               01
+            output_ready |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'AXI_matrix_mul'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2172.258 ; gain = 633.320 ; free physical = 3583 ; free virtual = 15524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              512 Bit    Registers := 1     
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2172.258 ; gain = 633.320 ; free physical = 3616 ; free virtual = 15557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2201.258 ; gain = 662.320 ; free physical = 3585 ; free virtual = 15526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2201.258 ; gain = 662.320 ; free physical = 3584 ; free virtual = 15525
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2212.273 ; gain = 673.336 ; free physical = 3569 ; free virtual = 15510
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.086 ; gain = 842.148 ; free physical = 3413 ; free virtual = 15350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.086 ; gain = 842.148 ; free physical = 3413 ; free virtual = 15350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.086 ; gain = 842.148 ; free physical = 3413 ; free virtual = 15350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.086 ; gain = 842.148 ; free physical = 3413 ; free virtual = 15350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.086 ; gain = 842.148 ; free physical = 3412 ; free virtual = 15350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.086 ; gain = 842.148 ; free physical = 3412 ; free virtual = 15350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |   512|
+|3     |LUT3 |     1|
+|4     |LUT6 |     1|
+|5     |FDCE |   514|
+|6     |FDPE |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.086 ; gain = 842.148 ; free physical = 3412 ; free virtual = 15350
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2381.086 ; gain = 732.410 ; free physical = 3412 ; free virtual = 15350
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2381.094 ; gain = 842.148 ; free physical = 3412 ; free virtual = 15350
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2381.094 ; gain = 0.000 ; free physical = 3412 ; free virtual = 15350
+WARNING: [Netlist 29-101] Netlist 'operations_inst_0_AXI_matrix_mul_0_0' is not ideal for floorplanning, since the cellview 'AXI_matrix_mul' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2437.113 ; gain = 0.000 ; free physical = 3566 ; free virtual = 15502
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 109854a0
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2437.113 ; gain = 1003.723 ; free physical = 3565 ; free virtual = 15502
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1733.562; main = 1712.961; forked = 323.751
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3081.934; main = 2437.117; forked = 909.672
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2461.125 ; gain = 0.000 ; free physical = 3565 ; free virtual = 15502
+INFO: [Common 17-1381] The checkpoint '/home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.runs/operations_inst_0_AXI_matrix_mul_0_0_synth_1/operations_inst_0_AXI_matrix_mul_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file operations_inst_0_AXI_matrix_mul_0_0_utilization_synth.rpt -pb operations_inst_0_AXI_matrix_mul_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  8 21:06:40 2025...

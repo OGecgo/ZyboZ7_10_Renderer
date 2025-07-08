@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -90,7 +91,6 @@ set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axis_subset_converter_0_0/main_axis_subset_converter_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_auto_pc_0/main_axi_mem_intercon_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_1/bd_ac0c_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_1/bd_ac0c_psr_aclk_0.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_2/bd_ac0c_arinsw_0_ooc.xdc]
@@ -132,12 +132,30 @@ set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_43/bd_ac0c_m02awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_44/bd_ac0c_m02wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_45/bd_ac0c_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_47/bd_ac0c_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_48/bd_ac0c_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_49/bd_ac0c_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_50/bd_ac0c_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_51/bd_ac0c_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/bd_0/ip/ip_52/bd_ac0c_m03bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rst_ps7_0_100M_0/main_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rst_ps7_0_100M_0/main_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rst_ps7_0_100M_0/main_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_xbar_0/main_axi_mem_intercon_imp_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_auto_pc_0/main_axi_mem_intercon_imp_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_auto_ds_0/main_axi_mem_intercon_imp_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_auto_ds_0/main_axi_mem_intercon_imp_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_auto_ds_0/main_axi_mem_intercon_imp_auto_ds_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_imp_auto_pc_1/main_axi_mem_intercon_imp_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/main_ooc.xdc]
+
+add_files /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/operations_inst_0.bd
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/ip/operations_inst_0_axi_dma_0_0/operations_inst_0_axi_dma_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/ip/operations_inst_0_axi_dma_0_0/operations_inst_0_axi_dma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/ip/operations_inst_0_axi_dma_0_0/operations_inst_0_axi_dma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/bd/operations_inst_0/operations_inst_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -154,6 +172,8 @@ set_property used_in_implementation false [get_files /home/go/Desktop/ZyboZ7_10_
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/utils_1/imports/synth_1/main_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

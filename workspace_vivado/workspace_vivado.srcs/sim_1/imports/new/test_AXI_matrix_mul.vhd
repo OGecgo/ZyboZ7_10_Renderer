@@ -83,32 +83,63 @@ begin
         -- Reset sequence
         aresetn <= '0';
         wait for 20 ns;
-        aresetn <= '1';
+        aresetn <= '1';        
         wait for 20 ns;
 
-        -- Send test data (512 bits = 16 floats × 32 bits)
+        -- Wait for ready signal
+        if s_axis_tready = '0' then
+            wait until s_axis_tready = '1';
+        end if;
+        wait for 10 ns;
+
+        -- Send first data (512 bits = 16 floats × 32 bits)
+        s_axis_tdata <= (others => '0');  -- data
         s_axis_tvalid <= '1';
         s_axis_tlast <= '1';
-        wait for 20 ns;
+        wait until rising_edge(aclk); -- wait one clock for send data
         
-        -- Wait for module to process
+        -- Complete the transaction
         s_axis_tvalid <= '0';
         s_axis_tlast <= '0';
-        wait for 20 ns;
-
+        
+        -- Wait for output to be ready
+        wait until m_axis_tvalid = '1';
+        wait for 10 ns;
+        
+        -- take the output data
         m_axis_tready <= '1';
-        wait for 20 ns;
+        wait for 10 ns;
+        m_axis_tready <= '0';
+        
+        -- Wait a bit before next transaction
+        wait for 10 ns;
 
-        -- new data for transfer
-        s_axis_tdata <= (others => '1');
-        wait for 20 ns;
-        s_axis_tlast <= '1';
+        -- Send second test data
+        if s_axis_tready = '0' then
+            wait until s_axis_tready = '1';
+        end if;
+
+        s_axis_tdata <= (others => '1');  -- All ones test data
         s_axis_tvalid <= '1';
-        wait for 20 ns;
+        s_axis_tlast <= '1';
+        wait for 10 ns;
+        
+        -- Complete the transaction
+        s_axis_tvalid <= '0';
+        s_axis_tlast <= '0';
+        
+        -- Wait for output and accept it
+        if m_axis_tvalid = '0' then
+            wait until m_axis_tvalid = '1';
+        end if;
+        
+        wait for 10 ns;
+        m_axis_tready <= '1';
+        wait until rising_edge(aclk);
+        m_axis_tready <= '0';
 
-
-
-    wait;
+        wait for 100 ns;
+        wait;
     end process;
 
 

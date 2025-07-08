@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Wed Jul  2 17:38:00 2025
+-- Date        : Wed Jul  2 17:37:59 2025
 -- Host        : go running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim
---               /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axi_dynclk_0_0/main_axi_dynclk_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_axi_dynclk_0_0 -prefix
+--               main_axi_dynclk_0_0_ main_axi_dynclk_0_0_sim_netlist.vhdl
 -- Design      : main_axi_dynclk_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -53,8 +53,6 @@ entity main_axi_dynclk_0_0_axi_dynclk_S00_AXI is
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_axi_dynclk_0_0_axi_dynclk_S00_AXI : entity is "axi_dynclk_S00_AXI";
 end main_axi_dynclk_0_0_axi_dynclk_S00_AXI;
 
 architecture STRUCTURE of main_axi_dynclk_0_0_axi_dynclk_S00_AXI is
@@ -4679,8 +4677,6 @@ entity main_axi_dynclk_0_0_mmcme2_drp is
     \rom_do_reg[10]_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_axi_dynclk_0_0_mmcme2_drp : entity is "mmcme2_drp";
 end main_axi_dynclk_0_0_mmcme2_drp;
 
 architecture STRUCTURE of main_axi_dynclk_0_0_mmcme2_drp is
@@ -6318,8 +6314,6 @@ entity main_axi_dynclk_0_0_axi_dynclk is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_axi_dynclk_0_0_axi_dynclk : entity is "axi_dynclk";
 end main_axi_dynclk_0_0_axi_dynclk;
 
 architecture STRUCTURE of main_axi_dynclk_0_0_axi_dynclk is

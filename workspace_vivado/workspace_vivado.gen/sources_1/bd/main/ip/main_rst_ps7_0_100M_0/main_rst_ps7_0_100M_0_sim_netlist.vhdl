@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Wed Jul  2 17:38:00 2025
+-- Date        : Wed Jul  2 17:37:59 2025
 -- Host        : go running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim
---               /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rst_ps7_0_100M_0/main_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_rst_ps7_0_100M_0 -prefix
+--               main_rst_ps7_0_100M_0_ main_rst_ps7_0_100M_0_sim_netlist.vhdl
 -- Design      : main_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity main_rst_ps7_0_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rst_ps7_0_100M_0_cdc_sync : entity is "cdc_sync";
 end main_rst_ps7_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of main_rst_ps7_0_100M_0_cdc_sync is
@@ -248,8 +246,6 @@ entity main_rst_ps7_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rst_ps7_0_100M_0_upcnt_n : entity is "upcnt_n";
 end main_rst_ps7_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of main_rst_ps7_0_100M_0_upcnt_n is
@@ -414,8 +410,6 @@ entity main_rst_ps7_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rst_ps7_0_100M_0_lpf : entity is "lpf";
 end main_rst_ps7_0_100M_0_lpf;
 
 architecture STRUCTURE of main_rst_ps7_0_100M_0_lpf is
@@ -604,8 +598,6 @@ entity main_rst_ps7_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rst_ps7_0_100M_0_sequence_psr : entity is "sequence_psr";
 end main_rst_ps7_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of main_rst_ps7_0_100M_0_sequence_psr is
@@ -944,8 +936,6 @@ entity main_rst_ps7_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of main_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of main_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_rst_ps7_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end main_rst_ps7_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of main_rst_ps7_0_100M_0_proc_sys_reset is

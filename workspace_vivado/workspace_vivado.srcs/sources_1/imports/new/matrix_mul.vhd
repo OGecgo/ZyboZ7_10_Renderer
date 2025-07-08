@@ -10,14 +10,19 @@ entity matrix_mul is
     port (
         leftMatrix   : in  std_logic_vector(16*floatSize-1 downto 0);
         rightMatrix  : in  std_logic_vector(16*floatSize-1 downto 0);
-        returnMatrix : out std_logic_vector(16*floatSize-1 downto 0)
+        returnMatrix : out std_logic_vector(16*floatSize-1 downto 0);
+        validation   : out std_logic
     );
 end matrix_mul;
 
 architecture Behavioral of matrix_mul is
 
 begin
+
+    -- the process
     returnMatrix <= not(leftMatrix);
+    -- Simple validation in one clock. (bad)
+    validation <= '1';
 
 end Behavioral;
 

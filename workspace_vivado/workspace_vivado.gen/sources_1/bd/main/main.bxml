@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="main" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1751467019"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1751467019"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1751467019"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1751467019"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1751997964"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1751997964"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1751997964"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1751997964"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/main.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -66,5 +66,24 @@
         <ProcessingOrder Val="NORMAL"/>
       </File>
     </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="/operations_0" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd/operations_inst_0/operations_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd/operations_inst_0/operations_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd/operations_inst_0/operations_inst_0.bd" BDFileset="operations_inst_0" BDSourceFile="../../../../workspace_vivado.srcs/sources_1/bd/operations/operations.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="operations" Type="Block Design" SubInstancePath="main_operations_0">
+        <TopFile Name="../../../../workspace_vivado.srcs/sources_1/bd/operations/operations.bd"/>
+        <FileCollection>
+          <File Name="../../../../workspace_vivado.srcs/sources_1/imports/new/matrix_mul.vhd"/>
+          <File Name="../../../../workspace_vivado.srcs/sources_1/imports/new/AXI_matrix_mul.vhd"/>
+          <File Name="../../../../workspace_vivado.srcs/sources_1/bd/operations/operations.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
   </CompositeFile>
 </Root>

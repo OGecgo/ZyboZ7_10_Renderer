@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 -- Date        : Wed Jul  2 17:37:59 2025
 -- Host        : go running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode synth_stub
---               /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_rst_ps7_0_100M_0/main_rst_ps7_0_100M_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top main_rst_ps7_0_100M_0 -prefix
+--               main_rst_ps7_0_100M_0_ main_rst_ps7_0_100M_0_stub.vhdl
 -- Design      : main_rst_ps7_0_100M_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

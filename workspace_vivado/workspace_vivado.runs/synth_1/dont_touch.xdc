@@ -30,9 +30,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axis_s
 # IP: bd/main/ip/main_xlconstant_0_0/main_xlconstant_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_xlconstant_0_0 || ORIG_REF_NAME==main_xlconstant_0_0} -quiet] -quiet
 
-# IP: bd/main/ip/main_axi_mem_intercon_imp_auto_pc_0/main_axi_mem_intercon_imp_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_mem_intercon_imp_auto_pc_0 || ORIG_REF_NAME==main_axi_mem_intercon_imp_auto_pc_0} -quiet] -quiet
-
 # IP: bd/main/ip/main_axi_mem_intercon_0/main_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_mem_intercon_0 || ORIG_REF_NAME==main_axi_mem_intercon_0} -quiet] -quiet
 
@@ -41,5 +38,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_sm
 
 # IP: bd/main/ip/main_rst_ps7_0_100M_0/main_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_rst_ps7_0_100M_0 || ORIG_REF_NAME==main_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/main/ip/main_axi_mem_intercon_imp_xbar_0/main_axi_mem_intercon_imp_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_mem_intercon_imp_xbar_0 || ORIG_REF_NAME==main_axi_mem_intercon_imp_xbar_0} -quiet] -quiet
+
+# IP: bd/main/ip/main_axi_mem_intercon_1/main_axi_mem_intercon_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_mem_intercon_1 || ORIG_REF_NAME==main_axi_mem_intercon_1} -quiet] -quiet
+
+# IP: bd/main/ip/main_axi_mem_intercon_imp_auto_pc_0/main_axi_mem_intercon_imp_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_mem_intercon_imp_auto_pc_0 || ORIG_REF_NAME==main_axi_mem_intercon_imp_auto_pc_0} -quiet] -quiet
+
+# IP: bd/main/ip/main_axi_mem_intercon_imp_auto_ds_0/main_axi_mem_intercon_imp_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_mem_intercon_imp_auto_ds_0 || ORIG_REF_NAME==main_axi_mem_intercon_imp_auto_ds_0} -quiet] -quiet
+
+# IP: bd/main/ip/main_axi_mem_intercon_imp_auto_pc_1/main_axi_mem_intercon_imp_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_mem_intercon_imp_auto_pc_1 || ORIG_REF_NAME==main_axi_mem_intercon_imp_auto_pc_1} -quiet] -quiet
 
 # XDC: /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/main_ooc.xdc

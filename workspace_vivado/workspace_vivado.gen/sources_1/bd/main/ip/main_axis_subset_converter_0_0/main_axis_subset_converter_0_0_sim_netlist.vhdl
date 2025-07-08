@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 -- Date        : Wed Jul  2 17:38:39 2025
 -- Host        : go running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim
---               /home/go/Desktop/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.gen/sources_1/bd/main/ip/main_axis_subset_converter_0_0/main_axis_subset_converter_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top main_axis_subset_converter_0_0 -prefix
+--               main_axis_subset_converter_0_0_ main_axis_subset_converter_0_0_sim_netlist.vhdl
 -- Design      : main_axis_subset_converter_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -103,8 +103,6 @@ entity main_axis_subset_converter_0_0_top_main_axis_subset_converter_0_0 is
   attribute G_TASK_SEVERITY_INFO of main_axis_subset_converter_0_0_top_main_axis_subset_converter_0_0 : entity is 0;
   attribute G_TASK_SEVERITY_WARNING : integer;
   attribute G_TASK_SEVERITY_WARNING of main_axis_subset_converter_0_0_top_main_axis_subset_converter_0_0 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of main_axis_subset_converter_0_0_top_main_axis_subset_converter_0_0 : entity is "top_main_axis_subset_converter_0_0";
 end main_axis_subset_converter_0_0_top_main_axis_subset_converter_0_0;
 
 architecture STRUCTURE of main_axis_subset_converter_0_0_top_main_axis_subset_converter_0_0 is
