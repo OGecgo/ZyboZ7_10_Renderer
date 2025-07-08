@@ -2,13 +2,35 @@
 
 link renderer: https://github.com/VictorK96/SoftwareRenderer
 
+Used:
+    Vivado 2024.2
+    Vitis Clasic
 
-When you download the project you should make your projects (vitis[classic] vivado) with name workspace_vivado and workspace_vitis
+--- Vivado ---
+1. Make Vivado Project
 
-take vivado project, delete folder workspace_vivado.srcs and make link from (your project)workspace_vivado/worspace_vivado.srcs to (git project)workspace_vivado/worspace_vivado.srcs
+2. Add to your project:
+```
+    "YourPath"/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/
+    ├─   /constrs_1/imports/hardware/zybo_z7_hdmi.xdc  # file
+    ├─   /sim_1/imports/new/test_AXI_matrix_mul.vhd    # file
+    └─   /sources_1/                                   # folder
+```
 
-do bitstream
-export
+3. Create a bitstream and then export it
 
-then when create vitis project make project renderer
-then delete folder workdpace_vitis/renderer/src and make link from (your project)workdpace_vitis/renderer/src (git project)workdpace_vitis/renderer/src
+--- Vitis ---
+4. Make Vitis Clasic Project using existing export
+
+5. Make in folder src link to folder (you can make link folder src or all what they have):
+```
+    "YourPath"/ZyboZ7_10_Renderer/workspace_vitis/renderer/src
+```
+
+6. change file ```"YourPath"/workspace_vivado/workspace_vitis/renderer/src/lscript.ld``` to have Heap Size = 0x2000000
+
+7. Last step. Build the project and run it
+
+
+Melodika exigite pws ginete run swsta kai genika perisoteres plirofories
+Kai to ekana me tetoio tropo wste na boreis na pirazeis to project sou kai na boreis na to anevazeis sto github
