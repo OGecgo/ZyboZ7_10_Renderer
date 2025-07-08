@@ -9,7 +9,12 @@ Used:
 --- Vivado ---
 1. Make Vivado Project
 
-2. Add to your project:
+2. import ip from floder:
+```
+    "YourPath"/ZyboZ7_10_Renderer/my_resorces/zybo_z7_hdmi_repo
+```
+
+3. Add to your project:
 ```
     "YourPath"/ZyboZ7_10_Renderer/workspace_vivado/workspace_vivado.srcs/
     ├─   /constrs_1/imports/hardware/zybo_z7_hdmi.xdc  # file
@@ -17,19 +22,19 @@ Used:
     └─   /sources_1/                                   # folder
 ```
 
-3. Create a bitstream and then export it
+4. Create a bitstream and then export it
 
 --- Vitis ---
-4. Make Vitis Clasic Project using existing export
+1. Make Vitis Clasic Project using existing export
 
-5. Make in folder src link to folder (you can make link folder src or all what they have):
+2. Make in folder src link to folder (you can make link folder src or all what they have):
 ```
     "YourPath"/ZyboZ7_10_Renderer/workspace_vitis/renderer/src
 ```
 
-6. change file ```"YourPath"/workspace_vivado/workspace_vitis/renderer/src/lscript.ld``` to have Heap Size = 0x2000000
+3. change file ```"YourPath"/workspace_vivado/workspace_vitis/renderer/src/lscript.ld``` to have Heap Size = 0x2000000
 
-7. Last step. Build the project and run it
+4. Last step. Build the project and run it
 
 
 Melodika exigite pws ginete run swsta kai genika perisoteres plirofories
