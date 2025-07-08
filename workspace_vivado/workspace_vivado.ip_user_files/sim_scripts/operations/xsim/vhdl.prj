@@ -1,7 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/operations/ip/operations_axi_dma_0_0/sim/operations_axi_dma_0_0.vhd" \
-"../../../bd/operations/ip/operations_AXI_matrix_mul_0_0/sim/operations_AXI_matrix_mul_0_0.vhd" \
-"../../../bd/operations/sim/operations.vhd" \
-
-# Do not sort compile order
-nosort

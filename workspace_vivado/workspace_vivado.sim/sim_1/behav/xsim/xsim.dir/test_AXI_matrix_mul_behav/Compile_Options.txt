@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "xilinx_vip" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "test_AXI_matrix_mul_behav" "xil_defaultlib.test_AXI_matrix_mul" "xil_defaultlib.glbl" -log "elaborate.log" 

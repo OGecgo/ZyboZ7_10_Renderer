@@ -1,4 +1,0 @@
-operations_axi_dma_0_0.vhd,vhdl,xil_defaultlib,../../../bd/operations/ip/operations_axi_dma_0_0/sim/operations_axi_dma_0_0.vhd,
-operations_AXI_matrix_mul_0_0.vhd,vhdl,xil_defaultlib,../../../bd/operations/ip/operations_AXI_matrix_mul_0_0/sim/operations_AXI_matrix_mul_0_0.vhd,
-operations.vhd,vhdl,xil_defaultlib,../../../bd/operations/sim/operations.vhd,
-glbl.v,Verilog,xil_defaultlib,glbl.v

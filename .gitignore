@@ -1,9 +1,14 @@
 
-# Add only the renderer folder from vitis project
+# Add only the src + gitignores folder from vitis project
 workspace_vitis/*
 !workspace_vitis/renderer/
+!workspace_vitis/renderer/**
 !workspace_vitis/renderer_system/
+!workspace_vitis/renderer_system/**
 
-# Don't ignore specific directories
-!README.md
+# Add only the srcs + gitignores folder from vivado project
+workspace_vivado/*
+!workspace_vivado/workspace_vivado.srcs/
+!workspace_vivado/workspace_vivado.srcs/**
+
 
