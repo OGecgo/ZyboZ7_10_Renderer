@@ -27,7 +27,7 @@ Used:
 --- Vitis ---
 1. Make Vitis Clasic Project using existing export
 
-2. Make in folder src link to folder (you can make link folder src or all what they have):
+2. Make in folder src link to folder:
 ```
     "YourPath"/ZyboZ7_10_Renderer/workspace_vitis/renderer/src
 ```
