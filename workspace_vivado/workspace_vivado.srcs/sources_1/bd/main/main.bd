@@ -3012,7 +3012,7 @@
                     "value": "64"
                   },
                   "SI_DATA_WIDTH": {
-                    "value": "512"
+                    "value": "256"
                   }
                 },
                 "interface_ports": {
@@ -3417,7 +3417,7 @@
                 "value_src": "default_prop"
               },
               "DATA_WIDTH": {
-                "value": "512",
+                "value": "256",
                 "value_src": "auto_prop"
               },
               "FREQ_HZ": {
@@ -3583,7 +3583,7 @@
               "WDATA": {
                 "physical_name": "M_AXI_S2MM_0_wdata",
                 "direction": "O",
-                "left": "511",
+                "left": "255",
                 "right": "0"
               },
               "WLAST": {
@@ -3597,7 +3597,7 @@
               "WSTRB": {
                 "physical_name": "M_AXI_S2MM_0_wstrb",
                 "direction": "O",
-                "left": "63",
+                "left": "31",
                 "right": "0"
               },
               "WVALID": {
@@ -3632,7 +3632,7 @@
                 "value_src": "default_prop"
               },
               "DATA_WIDTH": {
-                "value": "512",
+                "value": "256",
                 "value_src": "auto_prop"
               },
               "FREQ_HZ": {
@@ -3784,7 +3784,7 @@
               "RDATA": {
                 "physical_name": "M_AXI_MM2S_0_rdata",
                 "direction": "I",
-                "left": "511",
+                "left": "255",
                 "right": "0"
               },
               "RLAST": {
@@ -3814,7 +3814,11 @@
             "direction": "I",
             "parameters": {
               "ASSOCIATED_BUSIF": {
-                "value": "S_AXI_LITE_0:M_AXI_S2MM_0:M_AXI_MM2S_0",
+                "value": "M_AXI_MM2S_0:M_AXI_S2MM_0:S_AXI_LITE_0",
+                "value_src": "strong"
+              },
+              "ASSOCIATED_CLKEN": {
+                "value": "s_axis_aclken",
                 "value_src": "strong"
               },
               "ASSOCIATED_RESET": {
@@ -3854,16 +3858,20 @@
               "POLARITY": {
                 "value": "ACTIVE_LOW",
                 "value_src": "const_prop"
+              },
+              "TYPE": {
+                "value": "INTERCONNECT",
+                "value_src": "strong"
               }
             }
           }
         },
-        "post_compiled_compname": "operations_inst_0",
+        "post_compiled_compname": "operations_inst_1",
         "architecture": "zynq",
         "variant_info": {
           "operations.bd": {
-            "scoped_diagram": "operations_inst_0.bd",
-            "design_checksum": "0x8A3527AC9BE6342B",
+            "scoped_diagram": "operations_inst_1.bd",
+            "design_checksum": "0x2D42D3002A70C6D0",
             "ref_name": "operations",
             "ref_subinst_path": "main_operations_0",
             "ref_type": "Block Design",

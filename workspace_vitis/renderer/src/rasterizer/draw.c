@@ -10,10 +10,10 @@ void drawLine(int x1, int y1, int x2, int y2, uint32_t* buffer, int width, int h
     if (x2 < 0) x2 = 0;
     if (y2 < 0) y2 = 0;
     
-    if (x1 >= width) x1  = width -1;
+    if (x1 >= width)  x1 = width -1;
     if (y1 >= height) y1 = height-1;
-    if (x2 >= width) x2  = width -1;
-    if (y2 >= height) y2  = height-1;
+    if (x2 >= width)  x2 = width -1;
+    if (y2 >= height) y2 = height-1;
 
     uint32_t defaultColor = 0x00000000;
 
