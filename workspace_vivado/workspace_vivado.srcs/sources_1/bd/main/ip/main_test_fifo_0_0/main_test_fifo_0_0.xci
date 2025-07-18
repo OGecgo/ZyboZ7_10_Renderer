@@ -1,0 +1,48 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "main_test_fifo_0_0",
+    "cell_name": "test_fifo_0",
+    "component_reference": "xilinx.com:module_ref:test_fifo:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../workspace_vivado.gen/sources_1/bd/main/ip/main_test_fifo_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "main_test_fifo_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z010" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../workspace_vivado.gen/sources_1/bd/main/ip/main_test_fifo_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../../../../../workspace_vivado.srcs/sources_1/bd/main/ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "empty": [ { "direction": "in" } ],
+        "full": [ { "direction": "in" } ],
+        "din": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "dout": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "we": [ { "direction": "out" } ],
+        "re": [ { "direction": "out" } ]
+      }
+    }
+  }
+}
