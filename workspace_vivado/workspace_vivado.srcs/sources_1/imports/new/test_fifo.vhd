@@ -10,7 +10,7 @@ entity test_fifo is
         dout  : out std_logic_vector (31 downto 0);
 
         we    : out std_logic;
-        re    : out std_logic;
+        re    : out std_logic
     );
 end test_fifo;
 

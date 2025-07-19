@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "main_axi_dynclk_0_0",
-    "cell_name": "axi_dynclk_0",
+    "cell_name": "hdmi/axi_dynclk_0",
     "component_reference": "digilentinc.com:ip:axi_dynclk:1.2",
     "ip_revision": "2",
     "gen_directory": "../../../../../../workspace_vivado.gen/sources_1/bd/main/ip/main_axi_dynclk_0_0",

@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.967882",
-   "Default View_TopLeft":"587,253",
+   "Default View_TopLeft":"742,125",
    "ExpandedHierarchyInLayout":"",
    "Reduced Jogs_ExpandedHierarchyInLayout":"",
    "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
@@ -58,7 +58,9 @@ preplace inst read -pg 1 -lvl 4 -x 1310 -y 280 -defaultsOSRD
 preplace inst read_on -pg 1 -lvl 5 -x 1720 -y 270 -swap {1 0 2} -defaultsOSRD
 preplace inst write_on -pg 1 -lvl 5 -x 1720 -y 70 -swap {1 0 2} -defaultsOSRD
 preplace inst test_fifo_0 -pg 1 -lvl 5 -x 1720 -y 550 -defaultsOSRD
+preplace netloc Net 1 3 3 1070J 190 NJ 190 1910
 preplace netloc axi_bram_ctrl_0_bram_en_a 1 3 2 1090J 220 1530
+preplace netloc axi_bram_ctrl_0_bram_rst_a 1 3 3 NJ 340 NJ 340 1930
 preplace netloc axi_bram_ctrl_0_bram_we_a 1 3 2 1080 60 NJ
 preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 3 3 1060J 140 NJ 140 N
 preplace netloc fifo_generator_0_dout 1 3 3 1100J 350 NJ 350 1880
@@ -74,8 +76,6 @@ preplace netloc test_fifo_0_re 1 5 1 1920 240n
 preplace netloc test_fifo_0_we 1 5 1 N 550
 preplace netloc util_vector_logic_0_Res 1 4 1 N 280
 preplace netloc write_on_Res 1 5 1 1910 70n
-preplace netloc Net 1 3 3 1070J 190 NJ 190 1910
-preplace netloc axi_bram_ctrl_0_bram_rst_a 1 3 3 1090J 340 NJ 340 1930
 preplace netloc axi_smc_M00_AXI 1 2 1 730 450n
 preplace netloc axi_smc_M01_AXI 1 2 1 710 470n
 preplace netloc axi_smc_M02_AXI 1 2 1 700 490n
