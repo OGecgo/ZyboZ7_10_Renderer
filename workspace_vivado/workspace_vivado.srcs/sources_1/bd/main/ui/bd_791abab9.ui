@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.967882",
-   "Default View_TopLeft":"742,125",
+   "Default View_ScaleFactor":"0.731627",
+   "Default View_TopLeft":"12,-190",
    "ExpandedHierarchyInLayout":"",
    "Reduced Jogs_ExpandedHierarchyInLayout":"",
    "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
@@ -44,53 +44,30 @@ pagesize -pg 1 -db -bbox -sgen -120 -20 3320 1390
    "Reduced Jogs_TopLeft":"540,422",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 7 -x 2230 -y 410 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 7 -x 2230 -y 440 -defaultsOSRD
-preplace port hdmi_out -pg 1 -lvl 7 -x 2230 -y 710 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 4 -x 1310 -y 460 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 115 114} -defaultsOSRD
-preplace inst hdmi -pg 1 -lvl 3 -x 900 -y 510 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 77 76} -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 2 -x 550 -y 480 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 510 -swap {4 3 0 1 2 5 7 8 9 6} -defaultsOSRD
-preplace inst fifo_generator_0 -pg 1 -lvl 6 -x 2070 -y 570 -defaultsOSRD
-preplace inst fifo_generator_1 -pg 1 -lvl 6 -x 2070 -y 200 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 900 -y 300 -defaultsOSRD
-preplace inst read -pg 1 -lvl 4 -x 1310 -y 280 -defaultsOSRD
-preplace inst read_on -pg 1 -lvl 5 -x 1720 -y 270 -swap {1 0 2} -defaultsOSRD
-preplace inst write_on -pg 1 -lvl 5 -x 1720 -y 70 -swap {1 0 2} -defaultsOSRD
-preplace inst test_fifo_0 -pg 1 -lvl 5 -x 1720 -y 550 -defaultsOSRD
-preplace netloc Net 1 3 3 1070J 190 NJ 190 1910
-preplace netloc axi_bram_ctrl_0_bram_en_a 1 3 2 1090J 220 1530
-preplace netloc axi_bram_ctrl_0_bram_rst_a 1 3 3 NJ 340 NJ 340 1930
-preplace netloc axi_bram_ctrl_0_bram_we_a 1 3 2 1080 60 NJ
-preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 3 3 1060J 140 NJ 140 N
-preplace netloc fifo_generator_0_dout 1 3 3 1100J 350 NJ 350 1880
-preplace netloc fifo_generator_0_full 1 4 2 1560 470 1870
-preplace netloc fifo_generator_1_dout 1 4 2 1550 200 1880J
-preplace netloc fifo_generator_1_empty 1 4 2 1570 360 1900J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 410 400 390 720 610 1100 570 1530
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 5 30 620 NJ 620 NJ 620 NJ 620 1540
-preplace netloc read_on_Res 1 5 1 1890 270n
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 390 380 740
-preplace netloc test_fifo_0_dout 1 5 1 N 530
-preplace netloc test_fifo_0_re 1 5 1 1920 240n
-preplace netloc test_fifo_0_we 1 5 1 N 550
-preplace netloc util_vector_logic_0_Res 1 4 1 N 280
-preplace netloc write_on_Res 1 5 1 1910 70n
-preplace netloc axi_smc_M00_AXI 1 2 1 730 450n
-preplace netloc axi_smc_M01_AXI 1 2 1 710 470n
-preplace netloc axi_smc_M02_AXI 1 2 1 700 490n
-preplace netloc axi_smc_M03_AXI 1 2 1 690 280n
-preplace netloc hdmi_M00_AXI 1 3 1 1080 450n
-preplace netloc hdmi_hdmi_out 1 3 4 1060J 710 NJ 710 NJ 710 NJ
-preplace netloc processing_system7_0_DDR 1 4 3 NJ 410 NJ 410 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 4 3 NJ 430 NJ 430 2210J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 4 410 600 NJ 600 NJ 600 1520
-levelinfo -pg 1 0 210 550 900 1310 1720 2070 2230
-pagesize -pg 1 -db -bbox -sgen 0 0 2350 730
+preplace port DDR -pg 1 -lvl 5 -x 1420 -y 140 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1420 -y 170 -defaultsOSRD
+preplace port hdmi_out -pg 1 -lvl 5 -x 1420 -y 90 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 4 -x 1170 -y 200 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 115 114} -defaultsOSRD
+preplace inst hdmi -pg 1 -lvl 3 -x 820 -y 100 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 77 76} -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 2 -x 540 -y 80 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 180 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 80 380 160 690 190 950 310 1380
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 5 20 320 NJ 320 NJ 320 NJ 320 1390
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 390 170 680J
+preplace netloc hdmi_M00_AXI 1 3 1 960 110n
+preplace netloc hdmi_hdmi_out 1 3 2 NJ 90 NJ
+preplace netloc processing_system7_0_DDR 1 4 1 1400J 140n
+preplace netloc processing_system7_0_FIXED_IO 1 4 1 NJ 170
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 4 400 330 NJ 330 NJ 330 1400
+preplace netloc axi_smc_M00_AXI 1 2 1 N 60
+preplace netloc axi_smc_M01_AXI 1 2 1 N 80
+preplace netloc axi_smc_M02_AXI 1 2 1 N 100
+levelinfo -pg 1 0 200 540 820 1170 1420
+pagesize -pg 1 -db -bbox -sgen 0 0 1540 340
 "
 }
 {
-   "da_axi4_cnt":"14",
+   "da_axi4_cnt":"17",
    "da_clkrst_cnt":"7",
    "da_ps7_cnt":"1"
 }
