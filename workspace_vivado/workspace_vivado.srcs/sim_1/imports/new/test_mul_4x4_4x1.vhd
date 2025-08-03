@@ -12,14 +12,15 @@ architecture Behavioral of test_mul_4x4_4x1 is
     component mul_4x4_4x1
         generic(size_data: integer := 32);
         Port (
-            clk : in std_logic;
-            arst: in std_logic; 
+            clk:  in std_logic;
+            arst: in std_logic; -- active low 
 
-            left_block  : in  signed(size_data * 16 - 1 downto 0);
-            right_line  : in  signed(size_data * 16 - 1 downto 0);
+            s_tdata_left_block  : in  signed(size_data * 16 - 1 downto 0);
+            s_tdata_right_line  : in  signed(size_data *  4 - 1 downto 0);
+            s_tvalid            : in std_logic;
 
-            tdata:  out signed(size_data *  4 - 1 downto 0);
-            tvalid: out std_logic
+            m_tdata:  out signed(size_data *  4 - 1 downto 0);
+            m_tvalid: out std_logic
         );
     end component;
 
@@ -28,11 +29,12 @@ architecture Behavioral of test_mul_4x4_4x1 is
     signal clk : std_logic := '0';
     signal arst: std_logic := '0';
 
-    signal left_block  : signed(size_data * 16 - 1 downto 0) := (others => '0');
-    signal right_line  : signed(size_data *  4 - 1 downto 0) := (others => '0');
-    
-    signal tdata : signed(size_data * 4 - 1 downto 0);
-    signal tvalid: std_logic;
+    signal s_tdata_left_block  : signed(size_data * 16 - 1 downto 0) := (others => '0');
+    signal s_tdata_right_line  : signed(size_data *  4 - 1 downto 0) := (others => '0');
+    signal s_tvalid: std_logic := '0';
+
+    signal m_tdata : signed(size_data * 4 - 1 downto 0);
+    signal m_tvalid: std_logic;
 
 begin
 
@@ -41,10 +43,11 @@ begin
         Port map(
             clk  => clk,
             arst => arst,
-            left_block  => left_block,
-            right_line  => right_line,
-            tdata => tdata,
-            tvalid=> tvalid
+            s_tdata_left_block  => s_tdata_left_block,
+            s_tdata_right_line  => s_tdata_right_line,
+            s_tvalid => s_tvalid,
+            m_tdata  => m_tdata,
+            m_tvalid => m_tvalid
         );
 
 
@@ -63,18 +66,23 @@ begin
         --        [3,8,2,1]
         --        [5,2,1,9]
         --        [3,2,2,2]
-        left_block <= to_signed(5, size_data) & to_signed(2, size_data) & to_signed(3, size_data) & to_signed(5, size_data)&
+        s_tdata_left_block <= to_signed(5, size_data) & to_signed(2, size_data) & to_signed(3, size_data) & to_signed(5, size_data)&
                       to_signed(3, size_data) & to_signed(8, size_data) & to_signed(2, size_data) & to_signed(1, size_data)&
                       to_signed(5, size_data) & to_signed(2, size_data) & to_signed(1, size_data) & to_signed(9, size_data)&
                       to_signed(3, size_data) & to_signed(2, size_data) & to_signed(2, size_data) & to_signed(2, size_data);
 
 
         -- right = [3,2,1,3]
-        right_line <= to_signed(3, size_data)&
+        s_tdata_right_line <= to_signed(3, size_data)&
                       to_signed(2, size_data)&
                       to_signed(1, size_data)&
                       to_signed(3, size_data);
-        wait for 10 ms;
+        wait for 50 ns;
+        s_tvalid <= '1';
+        wait for 20 ns;
+        s_tvalid <= '0';
+        wait for 100 ns;
+        s_tvalid <= '1';
         wait;
     end process;
 
