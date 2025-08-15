@@ -228,17 +228,17 @@
                 "VT": "AC",
                 "BA": "0x43C00000",
                 "HA": "0x43C0FFFF",
-                "BP": "C_S_AXI_LITE_BASEADDR",
-                "HP": "C_S_AXI_LITE_HIGHADDR",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
                 "MA": "Data",
                 "MX": "/processing_system7_0",
                 "MI": "M_AXI_GP0",
-                "MS": "SEG_axi_dynclk_0_S_AXI_LITE_reg",
+                "MS": "SEG_axi_fifo_mm_s_0_Mem0",
                 "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/hdmi/axi_dynclk_0",
-                "SI": "S_AXI_LITE",
-                "SS": "S_AXI_LITE_reg",
-                "SV": "digilentinc.com:ip:axi_dynclk:1.2",
+                "SX": "/axi_fifo_mm_s_0",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_fifo_mm_s:4.3",
                 "TM": "both",
                 "TU": "register"
             },
@@ -246,6 +246,24 @@
                 "VT": "AC",
                 "BA": "0x43C10000",
                 "HA": "0x43C1FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_axi_dynclk_0_reg0",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/hdmi/axi_dynclk_0",
+                "SI": "s00_axi",
+                "SS": "reg0",
+                "SV": "digilentinc.com:ip:axi_dynclk:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V7": {
+                "VT": "AC",
+                "BA": "0x43C20000",
+                "HA": "0x43C2FFFF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
                 "MA": "Data",
@@ -259,6 +277,42 @@
                 "SV": "xilinx.com:ip:v_tc:6.2",
                 "TM": "both",
                 "TU": "register"
+            },
+            "V8": {
+                "VT": "AC",
+                "BA": "0x43C30000",
+                "HA": "0x43C3FFFF",
+                "BP": "C_AXI4_BASEADDR",
+                "HP": "C_AXI4_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_axi_fifo_mm_s_0_Mem1",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/axi_fifo_mm_s_0",
+                "SI": "S_AXI_FULL",
+                "SS": "Mem1",
+                "SV": "xilinx.com:ip:axi_fifo_mm_s:4.3",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V9": {
+                "VT": "ACE",
+                "BA": "0x00000000",
+                "HA": "0x3FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_MM2S",
+                "MX": "/hdmi/axi_vdma_0",
+                "MI": "M_AXI_MM2S",
+                "MS": "SEG_processing_system7_0_HP1_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_vdma:6.3",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP1",
+                "SS": "HP1_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
             }
         },
         "edges": [
@@ -287,6 +341,21 @@
             },
             {
                 "src": "V6",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V7",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V8",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V9",
                 "trg": "V2",
                 "EH": "2"
             }
