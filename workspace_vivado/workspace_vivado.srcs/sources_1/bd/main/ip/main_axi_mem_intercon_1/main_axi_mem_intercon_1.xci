@@ -8,8 +8,8 @@
     "gen_directory": "../../../../../../workspace_vivado.gen/sources_1/bd/main/ip/main_axi_mem_intercon_1",
     "parameters": {
       "component_parameters": {
-        "NUM_SI": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "NUM_MI": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "NUM_SI": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "NUM_MI": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "STRATEGY": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "ENABLE_ADVANCED_OPTIONS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "ENABLE_PROTOCOL_CHECKERS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -163,8 +163,8 @@
         "S14_HAS_REGSLICE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S15_HAS_REGSLICE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S00_HAS_DATA_FIFO": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "S01_HAS_DATA_FIFO": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "S02_HAS_DATA_FIFO": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "S01_HAS_DATA_FIFO": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "S02_HAS_DATA_FIFO": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S03_HAS_DATA_FIFO": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S04_HAS_DATA_FIFO": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S05_HAS_DATA_FIFO": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],

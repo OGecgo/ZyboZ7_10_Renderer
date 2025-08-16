@@ -15,15 +15,17 @@ architecture Behavioral of test_mul_1x4_4x1 is
         );
         
         Port (
-            clk: in std_logic;
-            arst: in std_logic;
+            clk : in std_logic;
+            arst: in std_logic; -- active low
 
-            s_tdata_left :  in signed(size_data * 4 - 1 downto 0);
-            s_tdata_right:  in signed(size_data * 4 - 1 downto 0);
-            s_tvalid     :  in std_logic;
+            s_tdata_left : in  signed(size_data * 4 - 1 downto 0);
+            s_tdata_right: in  signed(size_data * 4 - 1 downto 0);
+            s_tvalid     : in  std_logic;
+            s_tready     : out std_logic;
 
-            m_tdata:  out signed(size_data - 1 downto 0);
-            m_tvalid: out std_logic
+            m_tdata : out signed(size_data - 1 downto 0);
+            m_tvalid: out std_logic;
+            m_tready: in  std_logic
         );
     end component;
 
@@ -35,9 +37,11 @@ architecture Behavioral of test_mul_1x4_4x1 is
     signal s_tdata_left   : signed(size_data * 4 - 1 downto 0) := (others => '0');
     signal s_tdata_right  : signed(size_data * 4 - 1 downto 0) := (others => '0');
     signal s_tvalid       : std_logic := '0';
+    signal s_tready       : std_logic;
 
     signal m_tdata : signed(size_data - 1 downto 0);
     signal m_tvalid: std_logic;
+    signal m_tready: std_logic := '0';
 
 begin
 
@@ -49,8 +53,10 @@ begin
             s_tdata_left  => s_tdata_left,
             s_tdata_right => s_tdata_right,
             s_tvalid => s_tvalid,
+            s_tready => s_tready,
             m_tdata  => m_tdata,
-            m_tvalid => m_tvalid
+            m_tvalid => m_tvalid,
+            m_tready => m_tready
         )
     ;
 
@@ -78,10 +84,7 @@ begin
         
         wait for 50 ns;
         s_tvalid <= '1';
-        wait for 20 ns;
-        s_tvalid <= '0';
-        wait for 100 ns;
-        s_tvalid <= '1';
+        m_tready <= '0';
         wait;
     end process;
 
