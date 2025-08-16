@@ -16,10 +16,12 @@ architecture Behavioral of test_mul_4x4_4x4 is
 
             s_tdata_left_block  : in  signed(size_data * 16 - 1 downto 0);
             s_tdata_right_block : in  signed(size_data * 16 - 1 downto 0);
-            s_tvalid: in std_logic;
+            s_tvalid: in  std_logic;
+            s_tready: out std_logic;
 
-            m_tdata  : out signed(size_data * 16 - 1 downto 0);
-            m_tvalid: out std_logic
+            m_tdata : out signed(size_data * 16 - 1 downto 0);
+            m_tvalid: out std_logic;
+            m_tready: in  std_logic
         );
     end component;
 
@@ -31,9 +33,11 @@ architecture Behavioral of test_mul_4x4_4x4 is
     signal s_tdata_left_block  :signed(size_data * 16 - 1 downto 0) := (others => '0');
     signal s_tdata_right_block :signed(size_data * 16 - 1 downto 0) := (others => '0');
     signal s_tvalid: std_logic := '0';
+    signal s_tready: std_logic;
 
     signal m_tdata : signed(size_data * 16 - 1 downto 0);
     signal m_tvalid: std_logic;
+    signal m_tready: std_logic := '0';
 begin
 
     uut: entity work.mul_4x4_4x4
@@ -45,9 +49,11 @@ begin
         s_tdata_left_block   => s_tdata_left_block,
         s_tdata_right_block  => s_tdata_right_block,
         s_tvalid => s_tvalid,
+        s_tready => s_tready,
 
         m_tdata  => m_tdata,
-        m_tvalid => m_tvalid
+        m_tvalid => m_tvalid,
+        m_tready => m_tready
     )
     ;
 
@@ -80,12 +86,14 @@ begin
                        to_signed(2, size_data) & to_signed(2, size_data) & to_signed(3, size_data) & to_signed(1, size_data)&
                        to_signed(1, size_data) & to_signed(6, size_data) & to_signed(5, size_data) & to_signed(2, size_data);
         
-        wait for 50 ns;
+        wait for 40 ns;
         s_tvalid <= '1';
-        wait for 20 ns;
+        m_tready <= '0';
+        wait for 100 ns; -- take data
+        m_tready <= '1';
+        wait for 20 ns;  -- cannot take data
         s_tvalid <= '0';
-        wait for 100 ns;
-        s_tvalid <= '1';
+        m_tready <= '0';
         wait;
     end process;
 

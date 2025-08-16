@@ -1,4 +1,10 @@
 
+
+---------------------------------------------------------
+-- NOT USE THAT
+-- THAT TEST IS NOT FOR CURENT OF MUL 4X4 4X1
+---------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
