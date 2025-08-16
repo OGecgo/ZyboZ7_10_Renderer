@@ -82,8 +82,13 @@ begin
                  to_signed(1, size_data)&
                  to_signed(3, size_data);
         
-        wait for 50 ns;
+        wait for 40 ns;
         s_tvalid <= '1';
+        m_tready <= '0';
+        wait for 100 ns; -- take data
+        m_tready <= '1';
+        wait for 20 ns;  -- cannot take data
+        s_tvalid <= '0';
         m_tready <= '0';
         wait;
     end process;
