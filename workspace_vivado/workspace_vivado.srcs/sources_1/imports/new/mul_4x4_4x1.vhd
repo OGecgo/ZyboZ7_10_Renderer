@@ -13,10 +13,12 @@ entity mul_4x4_4x1 is
 
         s_tdata_left_block  : in  signed(size_data * 16 - 1 downto 0);
         s_tdata_right_line  : in  signed(size_data *  4 - 1 downto 0);
-        s_tvalid            : in std_logic;
+        s_tvalid            : in  std_logic;
+        s_tready            : out std_logic;
 
-        m_tdata:  out signed(size_data *  4 - 1 downto 0);
-        m_tvalid: out std_logic
+        m_tdata : out signed(size_data *  4 - 1 downto 0);
+        m_tvalid: out std_logic;
+        m_tready: in  std_logic
     );
 end mul_4x4_4x1;
 
@@ -31,13 +33,16 @@ component mul_1x4_4x1
         s_tdata_left : in  signed(size_data * 4 - 1 downto 0);
         s_tdata_right: in  signed(size_data * 4 - 1 downto 0);
         s_tvalid     : in  std_logic;
+        s_tready     : out std_logic;
 
         m_tdata : out signed(size_data - 1 downto 0);
-        m_tvalid: out std_logic
+        m_tvalid: out std_logic;
+        m_tready: in  std_logic
     );
 end component;
 
-    signal tvalid_array: std_logic_vector(3 downto 0);
+    signal m_tvalid_array: std_logic_vector(3 downto 0);
+    signal s_tready_array: std_logic_vector(3 downto 0);
 
 begin
     -- generate for block for multiply
@@ -51,11 +56,14 @@ begin
                 s_tdata_left   => s_tdata_left_block(size_data * (16 - i * 4) - 1 downto size_data * (12 - i * 4)), 
                 s_tdata_right  => s_tdata_right_line,
                 s_tvalid => s_tvalid, -- check validation being in mul_1x4_4x1
+                s_tready => s_tready_array(3 - i),
 
                 m_tdata  => m_tdata(size_data *  (4 - i) - 1 downto size_data *  (3 - i)),
-                m_tvalid => tvalid_array(3 - i)
+                m_tvalid => m_tvalid_array(3 - i),
+                m_tready => m_tready
             );
     end generate gen_mul;
     
-    m_tvalid <= tvalid_array(3) and tvalid_array(2) and tvalid_array(1) and tvalid_array(0);
+    m_tvalid <= m_tvalid_array(3) and m_tvalid_array(2) and m_tvalid_array(1) and m_tvalid_array(0);
+    s_tready <= s_tready_array(3) and s_tready_array(2) and s_tready_array(1) and s_tready_array(0);
 end Behavioral;

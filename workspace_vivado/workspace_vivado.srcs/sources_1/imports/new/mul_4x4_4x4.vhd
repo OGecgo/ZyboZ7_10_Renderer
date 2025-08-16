@@ -10,10 +10,12 @@ entity mul_4x4_4x4 is
 
         s_tdata_left_block  : in  signed(size_data * 16 - 1 downto 0);
         s_tdata_right_block : in  signed(size_data * 16 - 1 downto 0);
-        s_tvalid: in std_logic;
+        s_tvalid: in  std_logic;
+        s_tready: out std_logic;
 
         m_tdata : out signed(size_data * 16 - 1 downto 0);
-        m_tvalid: out std_logic
+        m_tvalid: out std_logic;
+        m_tready: in  std_logic
     );
 end mul_4x4_4x4;
 
@@ -27,10 +29,12 @@ architecture Behavioral of mul_4x4_4x4 is
 
             s_tdata_left_block: in  signed(size_data * 16 - 1 downto 0);
             s_tdata_right_line: in  signed(size_data * 4 - 1 downto 0);
-            s_tvalid: in std_logic;
+            s_tvalid: in  std_logic;
+            s_tready: out std_logic;
 
             m_tdata : out signed(size_data * 4 - 1 downto 0);
-            m_tvalid: out std_logic
+            m_tvalid: out std_logic;
+            m_tready: in  std_logic
         );
     end component;
 
@@ -57,7 +61,8 @@ architecture Behavioral of mul_4x4_4x4 is
     signal right_u : signed(size_data * 16 - 1 downto 0);
     signal result_u: signed(size_data * 16 - 1 downto 0);
 
-    signal tvalid_array: std_logic_vector(3 downto 0);
+    signal m_tvalid_array: std_logic_vector(3 downto 0);
+    signal s_tready_array: std_logic_vector(3 downto 0);
 
 begin
 
@@ -78,9 +83,12 @@ begin
                 s_tdata_left_block => s_tdata_left_block,
                 s_tdata_right_line => right_u(size_data * (16 - i * 4) - 1 downto size_data * (12 - i * 4)),
                 s_tvalid => s_tvalid,
+                s_tready => s_tready_array(i),
+
 
                 m_tdata  => result_u(size_data * (16 - i * 4) - 1 downto size_data * (12 - i * 4)),
-                m_tvalid => tvalid_array(i)
+                m_tvalid => m_tvalid_array(i),
+                m_tready => m_tready
             );
     end generate gen_mul; 
 
@@ -90,5 +98,6 @@ begin
     m_tdata(size_data* 8 - 1 downto size_data* 4) <= rotate_line(2, result_u);
     m_tdata(size_data* 4 - 1 downto 0           ) <= rotate_line(3, result_u);
     
-    m_tvalid <= tvalid_array(3) and tvalid_array(2) and tvalid_array(1) and tvalid_array(0);
+    m_tvalid <= m_tvalid_array(3) and m_tvalid_array(2) and m_tvalid_array(1) and m_tvalid_array(0);
+    s_tready <= s_tready_array(3) and s_tready_array(2) and s_tready_array(1) and s_tready_array(0);
 end Behavioral;
