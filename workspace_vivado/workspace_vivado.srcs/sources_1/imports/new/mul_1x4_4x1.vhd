@@ -69,34 +69,34 @@ begin
         m_tvalid <= '0';
       elsif clk'event and clk='1' then
 
-        wait_data  := not(not(not(m_tready) and count(1) and count(0)));
         -- mul + add
-        if wait_data='0' then
-          case count is
-            when "00" =>
-              temp_1 := x1;
-              temp_2 := x2;
-            when "01" =>
-              temp_1 := y1;
-              temp_2 := y2;
-            when "10" =>
-              temp_1 := z1;
-              temp_2 := z2;
-            when others =>
-              temp_1 := w1;
-              temp_2 := w2;
-          end case;
-          case count is
-            when "00" =>
-              data <= resize(temp_1 * temp_2, size_data);
-            when others =>
+        case count is
+          when "00" =>
+            temp_1 := x1;
+            temp_2 := x2;
+          when "01" =>
+            temp_1 := y1;
+            temp_2 := y2;
+          when "10" =>
+            temp_1 := z1;
+            temp_2 := z2;
+          when others =>
+            temp_1 := w1;
+            temp_2 := w2;
+        end case;
+        case count is
+          when "00" =>
+            data <= resize(temp_1 * temp_2, size_data);
+          when others =>
+            if wait_data='0' then
               data <= data + resize(temp_1 * temp_2, size_data);
-          end case;
-        end if;    
+            end if;
+        end case;
 
         wait_count := not(not(not(m_tready) and count(1) and count(0)) and s_tvalid);
         -- wait if not send data or wait if validation of data is wrong
         if wait_count='0' then
+          wait_data := '0';
           case count is
             when "00" => count <= "01";
             when "01" => count <= "10";
@@ -104,6 +104,8 @@ begin
             when "11" => count <= "00";
             when others => null;
           end case;
+        else 
+          wait_data := '1';
         end if;
 
         -- validation
