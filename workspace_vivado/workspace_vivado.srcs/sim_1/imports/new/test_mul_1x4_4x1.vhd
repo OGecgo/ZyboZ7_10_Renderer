@@ -10,10 +10,7 @@ architecture Behavioral of test_mul_1x4_4x1 is
 
 
     component mul_1x4_4x1
-        generic (
-            size_data: integer := 32 -- size of bits
-        );
-        
+        generic ( size_data: integer := 32);
         Port (
             clk : in std_logic;
             arst: in std_logic; -- active low
