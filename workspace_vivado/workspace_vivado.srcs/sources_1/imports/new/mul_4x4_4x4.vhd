@@ -69,7 +69,7 @@ begin
     -- rotate row
     right_u <= rotate_line(0, s_tdata_right_block)&
                rotate_line(1, s_tdata_right_block)& 
-               rotate_line(2, s_tdata_right_block)&
+               rotate_line(2, s_tdata_right_block)& 
                rotate_line(3, s_tdata_right_block);
 
     -- generate block for multiply

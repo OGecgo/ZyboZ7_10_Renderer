@@ -36,7 +36,7 @@ architecture Behavioral of mul_1x4_4x1 is
     signal w1: signed(size_data - 1 downto 0);
     signal w2: signed(size_data - 1 downto 0);
 
-    signal count: std_logic_vector(1 downto 0);
+    signal count: unsigned(1 downto 0);
     signal data : signed(size_data - 1 downto 0);
 begin
 
@@ -52,7 +52,7 @@ begin
     w1 <=  s_tdata_left(size_data - 1 downto 0);
     w2 <= s_tdata_right(size_data - 1 downto 0);
 
-  process(clk, arst)
+    process(clk)
         variable temp_1    : signed(size_data - 1 downto 0);
         variable temp_2    : signed(size_data - 1 downto 0);
         variable temp_data : signed(size_data - 1 downto 0);
@@ -60,56 +60,50 @@ begin
         variable wait_count: std_logic; -- 0 run 1 wait
         variable wait_data : std_logic;
     begin
-        if arst='0' then
-            count <= "00";
-            data  <= (others => '0');
-            s_tready <= '0';
-            m_tvalid <= '0';
-        elsif clk'event and clk='1' then
-
-            -- mul + add
-            case count is
-                when "00" =>
-                    temp_1 := x1;
-                    temp_2 := x2;
-                when "01" =>
-                    temp_1 := y1;
-                    temp_2 := y2;
-                when "10" =>
-                    temp_1 := z1;
-                    temp_2 := z2;
-                when others =>
-                    temp_1 := w1;
-                    temp_2 := w2;
-            end case;
-            case count is
-                when "00" =>
-                    data <= resize(temp_1 * temp_2, size_data);
-                when others =>
-                    if wait_data='0' then
-                        data <= data + resize(temp_1 * temp_2, size_data);
-                    end if;
-            end case;
-    
-            wait_count := not(not(not(m_tready) and count(1) and count(0)) and s_tvalid);
-            -- wait if not send data or wait if validation of data is wrong
-            if wait_count='0' then
-                wait_data := '0';
+        if clk'event and clk='1' then
+            if arst='0' then
+                count <= "00";
+                data  <= (others => '0');
+                s_tready <= '0';
+                m_tvalid <= '0';
+            else
+                -- mul + add
                 case count is
-                    when "00" => count <= "01";
-                    when "01" => count <= "10";
-                    when "10" => count <= "11";
-                    when "11" => count <= "00";
-                    when others => null;
+                    when "00" =>
+                        temp_1 := x1;
+                        temp_2 := x2;
+                    when "01" =>
+                        temp_1 := y1;
+                        temp_2 := y2;
+                    when "10" =>
+                        temp_1 := z1;
+                        temp_2 := z2;
+                    when others =>
+                        temp_1 := w1;
+                        temp_2 := w2;
                 end case;
-            else 
-                wait_data := '1';
+                case count is
+                    when "00" =>
+                        data <= resize(temp_1 * temp_2, size_data);
+                    when others =>
+                        if wait_data='0' then
+                            data <= data + resize(temp_1 * temp_2, size_data);
+                        end if;
+                end case;
+        
+                wait_count := not(not(not(m_tready) and count(1) and count(0)) and s_tvalid);
+                -- wait if not send data or wait if validation of data is wrong
+                if wait_count='0' then
+                    wait_data := '0';
+                    count <= count + 1;
+                else 
+                    wait_data := '1';
+                end if;
+        
+                -- validation
+                m_tvalid <= count(1) and count(0);
+                s_tready <= not(count(1) or count(0));
             end if;
-    
-            -- validation
-            m_tvalid <= count(1) and count(0);
-            s_tready <= not(count(1) or count(0));
-
         end if;
   end process;
 

@@ -73,16 +73,16 @@ begin
         --        [5,2,1,9]
         --        [3,2,2,2]
         s_tdata_left_block <= to_signed(5, size_data) & to_signed(2, size_data) & to_signed(3, size_data) & to_signed(5, size_data)&
-                      to_signed(3, size_data) & to_signed(8, size_data) & to_signed(2, size_data) & to_signed(1, size_data)&
-                      to_signed(5, size_data) & to_signed(2, size_data) & to_signed(1, size_data) & to_signed(9, size_data)&
-                      to_signed(3, size_data) & to_signed(2, size_data) & to_signed(2, size_data) & to_signed(2, size_data);
+                              to_signed(3, size_data) & to_signed(8, size_data) & to_signed(2, size_data) & to_signed(1, size_data)&
+                              to_signed(5, size_data) & to_signed(2, size_data) & to_signed(1, size_data) & to_signed(9, size_data)&
+                              to_signed(3, size_data) & to_signed(2, size_data) & to_signed(2, size_data) & to_signed(2, size_data);
 
 
         -- right = [3,2,1,3]
         s_tdata_right_line <= to_signed(3, size_data)&
-                      to_signed(2, size_data)&
-                      to_signed(1, size_data)&
-                      to_signed(3, size_data);
+                              to_signed(2, size_data)&
+                              to_signed(1, size_data)&
+                              to_signed(3, size_data);
         wait for 50 ns;
         s_tvalid <= '1';
         wait for 20 ns;

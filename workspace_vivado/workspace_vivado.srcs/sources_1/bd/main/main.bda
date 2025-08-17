@@ -194,9 +194,9 @@
                 "HA": "0x3FFFFFFF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
-                "MA": "Data_MM2S",
+                "MA": "Data",
                 "MX": "/axi_dma_0",
-                "MI": "M_AXI_MM2S",
+                "MI": "M_AXI",
                 "MS": "SEG_processing_system7_0_HP1_DDR_LOWOCM",
                 "MV": "xilinx.com:ip:axi_dma:7.1",
                 "SX": "/processing_system7_0",
@@ -207,24 +207,6 @@
                 "TU": "memory"
             },
             "V4": {
-                "VT": "AC",
-                "BA": "0x00000000",
-                "HA": "0x3FFFFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data_S2MM",
-                "MX": "/axi_dma_0",
-                "MI": "M_AXI_S2MM",
-                "MS": "SEG_processing_system7_0_HP1_DDR_LOWOCM",
-                "MV": "xilinx.com:ip:axi_dma:7.1",
-                "SX": "/processing_system7_0",
-                "SI": "S_AXI_HP1",
-                "SS": "HP1_DDR_LOWOCM",
-                "SV": "xilinx.com:ip:processing_system7:5.5",
-                "TM": "both",
-                "TU": "memory"
-            },
-            "V5": {
                 "VT": "AC",
                 "BA": "0x00000000",
                 "HA": "0x3FFFFFFF",
@@ -242,7 +224,7 @@
                 "TM": "both",
                 "TU": "memory"
             },
-            "V6": {
+            "V5": {
                 "VT": "AC",
                 "BA": "0x00000000",
                 "HA": "0x3FFFFFFF",
@@ -260,7 +242,7 @@
                 "TM": "both",
                 "TU": "memory"
             },
-            "V7": {
+            "V6": {
                 "VT": "AC",
                 "BA": "0x40400000",
                 "HA": "0x4040FFFF",
@@ -278,7 +260,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V8": {
+            "V7": {
                 "VT": "AC",
                 "BA": "0x43000000",
                 "HA": "0x4300FFFF",
@@ -296,7 +278,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V9": {
+            "V8": {
                 "VT": "AC",
                 "BA": "0x43C10000",
                 "HA": "0x43C1FFFF",
@@ -314,7 +296,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V10": {
+            "V9": {
                 "VT": "AC",
                 "BA": "0x43C20000",
                 "HA": "0x43C2FFFF",
@@ -374,11 +356,6 @@
             },
             {
                 "src": "V9",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V10",
                 "trg": "V2",
                 "EH": "2"
             }
