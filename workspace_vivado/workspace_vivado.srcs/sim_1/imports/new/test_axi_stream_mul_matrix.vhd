@@ -21,7 +21,8 @@ architecture Behavioral of test_axi_stream_mul_matrix is
         
             m_tdata : out signed(size_data * 16 - 1 downto 0);
             m_tvalid: out std_logic;
-            m_tready: in  std_logic
+            m_tready: in  std_logic;
+            m_tlast : out std_logic
         );
     end component;
 
@@ -39,6 +40,7 @@ architecture Behavioral of test_axi_stream_mul_matrix is
     signal m_tdata  : signed(size_data * 16 - 1 downto 0);
     signal m_tvalid : std_logic;
     signal m_tready : std_logic := '1';
+    signal m_tlast  : std_logic;
 
 begin
 
@@ -57,7 +59,8 @@ begin
 
             m_tdata  => m_tdata,
             m_tvalid => m_tvalid,
-            m_tready => m_tready
+            m_tready => m_tready,
+            m_tlast  => m_tlast
         );
 
     time_proc: process

@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.00186",
-   "Default View_TopLeft":"475,-15",
+   "Default View_ScaleFactor":"1.25026",
+   "Default View_TopLeft":"218,2",
    "ExpandedHierarchyInLayout":"",
    "Reduced Jogs_ExpandedHierarchyInLayout":"",
    "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
@@ -44,37 +44,40 @@ pagesize -pg 1 -db -bbox -sgen -120 -20 3320 1390
    "Reduced Jogs_TopLeft":"540,422",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 6 -x 1840 -y 80 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 6 -x 1840 -y 110 -defaultsOSRD
-preplace port hdmi_out -pg 1 -lvl 6 -x 1840 -y 420 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1588 -y 130 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 2 -x 520 -y 400 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 180 -y 390 -defaultsOSRD
-preplace inst hdmi -pg 1 -lvl 4 -x 1220 -y 430 -defaultsOSRD
-preplace inst axi_smc2 -pg 1 -lvl 4 -x 1220 -y 120 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 3 -x 850 -y 110 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 0 290 370 250 670 250 1070 220 1378 260 1810
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 -10 270 NJ 270 NJ 270 N 270 NJ 270 1800
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 360 240 680 240 1080
-preplace netloc axi_smc_M00_AXI 1 2 2 N 370 1020
-preplace netloc axi_smc_M01_AXI 1 2 2 N 390 N
-preplace netloc axi_smc_M02_AXI 1 2 2 N 410 N
-preplace netloc hdmi_M00_AXI 1 4 1 1360 100n
-preplace netloc hdmi_hdmi_out1 1 4 2 NJ 420 NJ
-preplace netloc processing_system7_0_DDR 1 5 1 NJ 80
-preplace netloc processing_system7_0_FIXED_IO 1 5 1 1820J 100n
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 380 280 NJ 280 N 280 NJ 280 1820
-preplace netloc axi_smc2_M00_AXI 1 4 1 N 120
-preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1040 60n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1020 80n
-preplace netloc axi_dma_0_M_AXI_SG 1 3 1 1030 40n
-preplace netloc axi_smc_M03_AXI 1 2 1 660 50n
-levelinfo -pg 1 -30 180 520 850 1220 1588 1840
-pagesize -pg 1 -db -bbox -sgen -30 -200 3270 1020
+preplace port DDR -pg 1 -lvl 6 -x 1930 -y 90 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 1930 -y 120 -defaultsOSRD
+preplace port hdmi_out -pg 1 -lvl 6 -x 1930 -y 400 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1680 -y 140 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 2 -x 560 -y 340 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 370 -defaultsOSRD
+preplace inst hdmi -pg 1 -lvl 4 -x 1320 -y 410 -defaultsOSRD
+preplace inst axi_smc2 -pg 1 -lvl 4 -x 1320 -y 130 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 950 -y 140 -defaultsOSRD
+preplace inst axi_stream_mul_matrix_0 -pg 1 -lvl 2 -x 560 -y 110 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 30 270 400 30 760 300 1170 30 1460 280 1900
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 20 240 NJ 240 710J 290 NJ 290 NJ 290 1890
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 410 200 780 280 1180
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 N 90
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 N 110
+preplace netloc axi_dma_0_M_AXI_SG 1 3 1 1180 70n
+preplace netloc axi_smc2_M00_AXI 1 4 1 N 130
+preplace netloc axi_smc_M00_AXI 1 2 2 740 360 1120J
+preplace netloc axi_smc_M01_AXI 1 2 2 720 370 NJ
+preplace netloc axi_smc_M02_AXI 1 2 2 710 390 NJ
+preplace netloc axi_smc_M03_AXI 1 2 1 700 80n
+preplace netloc hdmi_M00_AXI 1 4 1 1470 110n
+preplace netloc hdmi_hdmi_out1 1 4 2 NJ 400 NJ
+preplace netloc processing_system7_0_DDR 1 5 1 NJ 90
+preplace netloc processing_system7_0_FIXED_IO 1 5 1 1910J 110n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 420 250 770J 270 NJ 270 NJ 270 1910
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 3 420 10 NJ 10 1120
+preplace netloc axi_stream_mul_matrix_0_m 1 2 1 710 100n
+levelinfo -pg 1 0 210 560 950 1320 1680 1930
+pagesize -pg 1 -db -bbox -sgen 0 0 2260 670
 "
 }
 {
    "da_axi4_cnt":"41",
-   "da_clkrst_cnt":"17",
+   "da_clkrst_cnt":"18",
    "da_ps7_cnt":"2"
 }

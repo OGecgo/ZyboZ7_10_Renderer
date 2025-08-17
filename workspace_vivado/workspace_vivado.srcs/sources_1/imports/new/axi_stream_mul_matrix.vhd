@@ -8,15 +8,17 @@ entity axi_stream_mul_matrix is
         clk : in std_logic;
         arst: in std_logic;
 
-        -- axi stream
+        --S_AXI
         s_tdata : in  signed(size_data * 16 - 1 downto 0);
         s_tid   : in  std_logic;
         s_tvalid: in  std_logic;
         s_tready: out std_logic;
-    
+        --M_AXI
         m_tdata : out signed(size_data * 16 - 1 downto 0);
         m_tvalid: out std_logic;
-        m_tready: in  std_logic
+        m_tready: in  std_logic;
+        m_tlast : out std_logic
+        
     );
 end axi_stream_mul_matrix;
 
@@ -44,6 +46,7 @@ architecture Behavioral of axi_stream_mul_matrix is
     signal save_matrix: std_logic;
 
     signal s_tready_temp: std_logic;
+    signal m_tvalid_temp: std_logic;
 
 begin
     do_mul      <= (not s_tid) and s_tvalid;
@@ -61,7 +64,7 @@ begin
             s_tready            => s_tready_temp,
 
             m_tdata  => m_tdata,
-            m_tvalid => m_tvalid,
+            m_tvalid => m_tvalid_temp,
             m_tready => m_tready
         );
     
@@ -75,5 +78,7 @@ begin
         end if;
     end process;
     s_tready <= s_tready_temp or save_matrix;
+    m_tvalid <= m_tvalid_temp; 
+    m_tlast  <= m_tvalid_temp; -- one package 
     --m_tdata <= matrix; debug
 end Behavioral;
