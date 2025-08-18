@@ -13,11 +13,12 @@ entity axi_stream_mul_matrix is
         s_tid   : in  std_logic;
         s_tvalid: in  std_logic;
         s_tready: out std_logic;
+        s_tlast : in  std_logic;
 
         --M_AXI
         m_tdata : out signed(size_data * 4 - 1 downto 0);
         m_tvalid: out std_logic;
-        m_tready: in  std_logic;
+        m_tready: in  std_logic; 
         m_tlast : out std_logic
         
     );
@@ -74,7 +75,7 @@ begin
         port map(
             clk  => clk,
             arst => arst,
-
+ 
             s_tdata_left_block => matrix,
             s_tdata_right_line => s_tdata,
             s_tvalid           => do_mul,
@@ -101,6 +102,6 @@ begin
 
     s_tready <= s_tready_temp or save_matrix;
     m_tvalid <= m_tvalid_temp; 
-    m_tlast  <= m_tvalid_temp; -- one package 
+    m_tlast  <= (m_tvalid_temp or save_matrix) and s_tlast; 
     --m_tdata <= matrix; debug
 end Behavioral;

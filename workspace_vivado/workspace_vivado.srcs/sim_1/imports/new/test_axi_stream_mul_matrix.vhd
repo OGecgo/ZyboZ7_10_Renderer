@@ -18,7 +18,8 @@ architecture Behavioral of test_axi_stream_mul_matrix is
             s_tid   : in  std_logic;
             s_tvalid: in  std_logic;
             s_tready: out std_logic;
-        
+            s_tlast : in  std_logic;
+
             m_tdata : out signed(size_data * 4 - 1 downto 0);
             m_tvalid: out std_logic;
             m_tready: in  std_logic;
@@ -36,6 +37,7 @@ architecture Behavioral of test_axi_stream_mul_matrix is
     signal s_tid    : std_logic := '0';
     signal s_tvalid : std_logic := '0';
     signal s_tready : std_logic;
+    signal s_tlast  : std_logic := '0';
 
     signal m_tdata  : signed(size_data * 4 - 1 downto 0);
     signal m_tvalid : std_logic;
@@ -56,6 +58,7 @@ begin
             s_tid    => s_tid,
             s_tvalid => s_tvalid,
             s_tready => s_tready,
+            s_tlast  => s_tlast,
 
             m_tdata  => m_tdata,
             m_tvalid => m_tvalid,
@@ -98,9 +101,10 @@ begin
                    to_signed(1, size_data)&
                    to_signed(3, size_data);
         s_tvalid <= '1';
-        
+        s_tlast  <= '1';
         wait for 20 ns;
         m_tready <= '1';
+        
         wait;
     end process;
 
