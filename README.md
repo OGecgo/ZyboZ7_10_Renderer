@@ -6,7 +6,6 @@ This project is a **from-scratch 3D renderer** for the Zynq-7000 (Zybo Z7-10) th
 - a **software rasterizer** in bare-metal C running on the ARM **Cortex-A9**
 - a lightweight **FPGA Vertex Transform Unit (VTU)** in the PL that offloads matrix transforms.
 
-## Demo Video
 [![Watch the demo](https://img.youtube.com/vi/xsQ5klnrDiM?si=pu4Sd3zznvZ_XwqU/hqdefault.jpg)](https://youtu.be/xsQ5klnrDiM?si=pu4Sd3zznvZ_XwqU "Watch the demo on YouTube")
 
 
